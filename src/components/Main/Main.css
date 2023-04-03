@@ -1,0 +1,29 @@
+.Main {
+    background-color: antiquewhite;
+    width: 100%;
+}
+
+.Main-contetnt {
+    margin: 0;
+    padding: 0;
+    border: 1px solid red;
+    display: flex;
+    justify-content: center;
+}
+
+.Main-link {
+    text-decoration: none;
+}
+
+.Main-profile {
+    margin: 10px;
+    padding: 0;
+    width: 200px;
+    height: 200px;
+    background-color: aquamarine;
+    border: 1px solid red;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
