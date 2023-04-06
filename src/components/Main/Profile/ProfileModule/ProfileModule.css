@@ -1,0 +1,32 @@
+.ProfileModule{
+    border: 1px solid red;
+    margin: 0;
+    padding: 0 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.ProfileModule-header {
+    width: 200px;
+    height: 200px;
+    margin: 0;
+    padding: 0;
+    border: 1px solid red;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.ProfileModule-class{
+    width: 150px;
+    background-color: aliceblue;
+    border: 1px solid black;
+
+}
+
+.ProfileModule-link{
+    text-decoration: none;
+
+}

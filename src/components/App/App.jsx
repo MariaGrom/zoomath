@@ -10,6 +10,8 @@ import ProfileGeometry from '../Main/ProfileGeometry/ProfileGeometry';
 import Header from '../Header/Header';
 import Footer from '../Footer/Footer';
 import BaseTasks from '../BaseTasks/BaseTasks';
+import Theory from '../Theory/Theory';
+import Test from '../Test/Test';
 
 function App() {
   return (
@@ -17,11 +19,13 @@ function App() {
 <Header />
       <Routes>
         <Route path='/' element={<Main />}/>
-        <Route path='/basetasks' element={<BaseTasks />} />
+        <Route path='basetasks' element={<BaseTasks />} />
         <Route path='/theme' element={<Theme />}/>
         <Route path='/card' element={<Card />}/>
         <Route path='/algebra' element={<ProfileAlgebra/>}/>
         <Route path='/geometry' element={<ProfileGeometry/>}/>
+        <Route path='/theory' element={<Theory />}/>
+        <Route path='/test' element={<Test/>} />
       </Routes>
 <Footer />
     </div>

@@ -1,0 +1,60 @@
+.Profile {
+    margin: 0;
+    padding: 0;
+    background-color: beige;
+
+}
+
+.Profile-content {
+    width: 100%;
+    margin: 0 auto;
+    padding: 10px 0;
+    border: 1px solid red;
+    display: flex;
+    justify-content: center;
+}
+
+.Profile-module{
+    border: 1px solid red;
+    margin: 0;
+    padding: 0 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.Profile-header {
+    width: 200px;
+    height: 200px;
+    margin: 0;
+    padding: 0;
+    border: 1px solid red;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+div#base {
+    background-color: aqua;
+}
+
+div#theory {
+    background-color: blue;
+}
+
+div#test {
+    background-color: azure;
+}
+
+.Profile-class{
+    width: 150px;
+    background-color: aliceblue;
+    border: 1px solid black;
+
+}
+
+.Profile-link{
+    text-decoration: none;
+
+}

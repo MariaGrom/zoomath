@@ -1,11 +1,12 @@
 import React from 'react';
-import './ProfileGeometry.css';
+import Profile from '../Profile/Profile';
 
 function ProfileGeometry() {
     return (
-        <div className='ProfileGeometry'>
-           ProfileGeometry
-        </div>
+        <Profile 
+        title="Геометрия"
+        linkbase='/geometry/basetasks'
+        />
     );
 }
 
