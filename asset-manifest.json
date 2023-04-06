@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/zoomath/static/css/main.654c0289.css",
-    "main.js": "/zoomath/static/js/main.b8bc4315.js",
+    "main.css": "/zoomath/static/css/main.d7aefa7d.css",
+    "main.js": "/zoomath/static/js/main.db3ac36f.js",
     "index.html": "/zoomath/index.html",
-    "main.654c0289.css.map": "/zoomath/static/css/main.654c0289.css.map",
-    "main.b8bc4315.js.map": "/zoomath/static/js/main.b8bc4315.js.map"
+    "main.d7aefa7d.css.map": "/zoomath/static/css/main.d7aefa7d.css.map",
+    "main.db3ac36f.js.map": "/zoomath/static/js/main.db3ac36f.js.map"
   },
   "entrypoints": [
-    "static/css/main.654c0289.css",
-    "static/js/main.b8bc4315.js"
+    "static/css/main.d7aefa7d.css",
+    "static/js/main.db3ac36f.js"
   ]
 }
