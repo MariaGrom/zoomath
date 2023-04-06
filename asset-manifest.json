@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/zoomath/static/css/main.654c0289.css",
+    "main.js": "/zoomath/static/js/main.e825ba82.js",
+    "index.html": "/zoomath/index.html",
+    "main.654c0289.css.map": "/zoomath/static/css/main.654c0289.css.map",
+    "main.e825ba82.js.map": "/zoomath/static/js/main.e825ba82.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.654c0289.css",
+    "static/js/main.e825ba82.js"
+  ]
+}
