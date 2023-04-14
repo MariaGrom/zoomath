@@ -16,9 +16,10 @@ function App() {
   return (
     <div className="App">
       <Header />
+<Main />
       <Routes>
 
-        <Route path='/' element={<Main />}/>
+        {/* <Route path='/' element={<Main />}/> */}
         <Route path='/algebra/base' element={<BaseTasks/>} />
         {/* к кард  path='/algebra/base/card' нужно добавить id каждой карточки, когда загружу что-то на бэк*/}
         <Route path='/algebra/base/card' element={<Card />}/>
