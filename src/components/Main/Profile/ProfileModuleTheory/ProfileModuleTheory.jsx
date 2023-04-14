@@ -1,12 +1,12 @@
 import React from 'react';
 import ProfileModule from '../ProfileModule/ProfileModule'
 
-function ProfileModuleTheory() {
+function ProfileModuleTheory(props) {
     return (
         <ProfileModule
         id="theory"
         title="Теория"
-        link='/theory'
+        link={`${props.link}/theory`}
         />
     );
 }

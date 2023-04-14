@@ -1,60 +1,8 @@
-.ProfileAlgebra {
-    margin: 0;
-    padding: 0;
-    background-color: beige;
-
-}
-
-.ProfileAlgebra-content {
-    width: 100%;
-    margin: 0 auto;
-    padding: 10px 0;
-    border: 1px solid red;
-    display: flex;
-    justify-content: center;
-}
-
-.ProfileAlgebra-module{
-    border: 1px solid red;
-    margin: 0;
-    padding: 0 5px;
+.ProfileAlgebra{
     display: flex;
     flex-direction: column;
-    align-items: center;
 }
 
-
-.ProfileAlgebra-header {
-    width: 200px;
-    height: 200px;
-    margin: 0;
-    padding: 0;
-    border: 1px solid red;
+.ProfileAlgebra-content{
     display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-div#base {
-    background-color: aqua;
-}
-
-div#theory {
-    background-color: blue;
-}
-
-div#test {
-    background-color: azure;
-}
-
-.ProfileAlgebra-class{
-    width: 150px;
-    background-color: aliceblue;
-    border: 1px solid black;
-
-}
-
-.ProfileAlgebra-link{
-    text-decoration: none;
-
 }

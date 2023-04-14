@@ -1,12 +1,12 @@
 import React from 'react';
 import ProfileModule from '../ProfileModule/ProfileModule'
 
-function ProfileModuleTest() {
+function ProfileModuleTest(props) {
     return (
         <ProfileModule
         id="test"
         title="Контрольные работы"
-        link='/test'
+        link={`${props.link}/test`}
         />
     );
 }

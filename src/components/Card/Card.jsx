@@ -13,7 +13,11 @@ function Card() {
                     <li><button id='super' type='button' className='Card-skill'>олимпиадный</button></li>
                 </ul>
                 <div className='Card-Task'></div>
+                <div className='Card-Task'></div>
+                <div className='Card-Task'></div>
+                <div className='Card-Task'></div>
             </div>
+
         </div>
     );
 }

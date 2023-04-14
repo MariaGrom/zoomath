@@ -4,7 +4,8 @@ import { Link } from 'react-router-dom';
 
 function Main() {
     return (
-        <div className='Main'>
+        <main className='Main'>
+
            <h1 className='Main-title'>главная</h1> 
            <h2 className='Main-subtitle'>Интнресный текст - почему мы молодцы и какие хорошие</h2>
            <div className='Main-contetnt'>
@@ -17,7 +18,8 @@ function Main() {
             <div className='Main-profile'>геометрия</div>
            </Link>
            </div>
-        </div>
+
+        </main>
     );
 }
 

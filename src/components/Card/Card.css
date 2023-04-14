@@ -30,4 +30,6 @@
     margin: 0;
     padding: 0;
     background-color: aliceblue;
+    border: 1px solid red;
+    margin-bottom: 20px;
 }
