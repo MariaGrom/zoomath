@@ -1,7 +1,7 @@
 import React from 'react';
-import './Theory.css';
+import './TheoryAlgebra.css';
 
-function Theory(props) {
+function TheoryAlgebra(props) {
     return (
         <div>
             блок теоретический. пока неизвестно, как он должен выглядить
@@ -19,4 +19,4 @@ function Theory(props) {
 
 }
 
-export default Theory
+export default TheoryAlgebra

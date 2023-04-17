@@ -1,7 +1,7 @@
 import React from 'react';
-import './Card.css';
+import './CardAlgebra.css';
 
-function Card() {
+function CardAlgebra() {
     return (
         <div className='Card'>
             <h3 className='Card-title'>навигационная строка(если нужно) типа: Алгебра/база вопросов/9класс/задания по теме №1</h3>
@@ -22,4 +22,4 @@ function Card() {
     );
 }
 
-export default Card;
+export default CardAlgebra;

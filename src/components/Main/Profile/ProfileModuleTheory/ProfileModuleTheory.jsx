@@ -6,6 +6,7 @@ function ProfileModuleTheory(props) {
         <ProfileModule
         id="theory"
         title="Теория"
+        discription="Здесь собраны все необходимые материалы, которые нужны для качественного освоения материлов в соответствии с выбранным классом"
         link={`${props.link}/theory`}
         />
     );

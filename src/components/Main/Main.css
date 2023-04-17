@@ -1,29 +1,47 @@
 .Main {
-    background-color: antiquewhite;
+    background-color: rgb(215, 250, 250);
     width: 100%;
 }
 
-.Main-contetnt {
-    margin: 0;
+.Main__container {
+    margin: 0 auto;
     padding: 0;
     border: 1px solid red;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    width: calc(100% - 2 * 60px);
+    align-items: center;
 }
 
-.Main-link {
+.Main__subtitle{
+    font-size:small;
+    font-size: 18px;
+}
+
+.Main__content{
+    display: flex;
+    padding-top: 30px;
+
+}
+.Main__link {
     text-decoration: none;
+    color: black;
 }
 
-.Main-profile {
+.Main__profile {
     margin: 10px;
     padding: 0;
     width: 200px;
     height: 200px;
-    background-color: aquamarine;
-    border: 1px solid red;
+    background-color: rgb(243, 244, 243);
+    border-radius: 20px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     display: flex;
     align-items: center;
     justify-content: center;
 
+}
+
+.Main__profile:hover{
+    background-color: rgb(165, 175, 165);
 }

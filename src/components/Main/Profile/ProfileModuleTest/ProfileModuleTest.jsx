@@ -6,6 +6,7 @@ function ProfileModuleTest(props) {
         <ProfileModule
         id="test"
         title="Контрольные работы"
+        discription="В этом разделе вы найдете сконфигурированные контрольные работы. Выбрав определенный уровень сложности, вы сможете проверить уровень своей подготовки!"
         link={`${props.link}/test`}
         />
     );

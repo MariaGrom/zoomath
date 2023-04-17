@@ -1,8 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import './BaseTasks.css';
+import './BaseTasksAlgebra.css';
 
-function BaseTasks() {
+function BaseTasksAlgebra() {
     return (
         <div className='BaseTasks'>
             <h3 className='BaseTasks-title'>навигационная строка(если нужно) типа: Алгебра/база вопросов/9класс</h3>
@@ -40,4 +40,4 @@ function BaseTasks() {
     );
 }
 
-export default BaseTasks;
+export default BaseTasksAlgebra;

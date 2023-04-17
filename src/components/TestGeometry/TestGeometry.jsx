@@ -1,9 +1,11 @@
 import React from 'react';
-import './Test.css';
+import './TestGeometry.css';
 
-function Test(props) {
+function TestGeometry(props) {
 return (
     <div>
+
+        ГЕОМЕТРИЯ
         блок с контрольными. пока неизвестно, как он должен выглядить
         
     </div>
@@ -11,4 +13,4 @@ return (
 
 }
 
-export default Test
+export default TestGeometry

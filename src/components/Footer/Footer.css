@@ -3,3 +3,28 @@
     background-color:#959595 ;
     height: 30px;
 }
+
+.Footer__content {
+    width: calc(100% - 2 * 60px);
+    height: 100%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+}
+
+.Footer__navigation{
+    width: 100%;
+
+}
+.Footer__list {
+    list-style-type: none;
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.Footer__item{
+    padding: 0 10px;
+    text-decoration: none;
+    color: black;
+}

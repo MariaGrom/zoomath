@@ -6,17 +6,22 @@ function Main() {
     return (
         <main className='Main'>
 
-           <h1 className='Main-title'>главная</h1> 
-           <h2 className='Main-subtitle'>Интнресный текст - почему мы молодцы и какие хорошие</h2>
-           <div className='Main-contetnt'>
-           <Link to='/algebra' className='Main-link'>
-            <div className='Main-profile'>
-                алгебра
-                </div>
+
+           <div className='Main__container'>
+           <h1 className='Main__title'> Заголовок сайта</h1>
+           <h2 className='Main__subtitle'>Интнресный текст - почему мы молодцы и какие хорошие.
+           Интнресный текст - почему мы молодцы и какие хорошие.
+           Интнресный текст - почему мы молодцы и какие хорошие.
+           Интнресный текст - почему мы молодцы и какие хорошие.
+           </h2>
+           <div className='Main__content'>
+           <Link to='/algebra' className='Main__link'>
+            <div className='Main__profile'>Алгебра</div>
            </Link>
-           <Link to='/geometry' className='Main-link'> 
-            <div className='Main-profile'>геометрия</div>
+           <Link to='/geometry' className='Main__link'> 
+            <div className='Main__profile'>Геометрия</div>
            </Link>
+           </div>
            </div>
 
         </main>

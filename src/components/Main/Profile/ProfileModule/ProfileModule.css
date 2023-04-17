@@ -1,6 +1,5 @@
-.ProfileModule{
-    border: 1px solid red;
-    margin: 0;
+.ProfileModule {
+    margin: 30px 0;
     padding: 0 5px;
     display: flex;
     flex-direction: column;
@@ -8,25 +7,42 @@
 }
 
 
-.ProfileModule-header {
+.ProfileModule__header {
     width: 200px;
-    height: 200px;
+    height: 300px;
     margin: 0;
-    padding: 0;
-    border: 1px solid red;
+    padding: 10px;
+    background-color: rgb(243, 244, 243);
+    border-radius: 20px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.ProfileModule__title {
+    padding-top: 20px;
+}
+
+.ProfileModule__class {
+    width: 150px;
+    background-color: aliceblue;
+    border: none;
+    border-radius: 5px;
+    margin: 10px 0;
+    height: 30px;
     display: flex;
     justify-content: center;
     align-items: center;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
-.ProfileModule-class{
-    width: 150px;
-    background-color: aliceblue;
-    border: 1px solid black;
-
+.ProfileModule__class:hover {
+    background-color: silver;
 }
 
-.ProfileModule-link{
+.ProfileModule__link {
     text-decoration: none;
-
+    color: black;
 }

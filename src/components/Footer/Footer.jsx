@@ -3,9 +3,17 @@ import './Footer.css';
 
 function Footer() {
     return (
-        <div className='Footer'>
-           <h2 className='Footer-title'>подвал</h2> 
-        </div>
+        <section className='Footer'>
+            <div className='Footer__content'>
+            <nav className='Footer__navigation'>
+                <ul className='Footer__list'>
+                    <li><a className='Footer__item'>О нас</a></li>
+                    <li><a className='Footer__item'>Контакты</a></li>
+                    <li><a className='Footer__item'>Политика конфиденциальности </a></li>
+                </ul>
+            </nav>
+            </div>
+        </section>
     );
 }
 

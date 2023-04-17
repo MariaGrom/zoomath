@@ -1,5 +1,26 @@
-.Header{
+.Header {
     width: 100%;
-    background-color:#959595 ;
+    background-color: #a5daf99b;
     height: 30px;
+
+}
+
+.Header__content {
+    width: calc(100% - 2 * 60px);
+    height: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.Header__list {
+    list-style-type: none;
+    display: flex;
+}
+
+.Header__item{
+    padding: 0 10px;
+    text-decoration: none;
+    color: black;
 }
