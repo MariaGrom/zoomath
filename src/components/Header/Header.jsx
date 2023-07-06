@@ -1,19 +1,22 @@
 import React from 'react';
-import './Header.css';
+import styles from './Header.module.scss';
+import { Link } from 'react-router-dom';
+import IconUser from '../../img/user-login.svg'
 
 function Header() {
     return (
-        <section className='Header'>
-            <div className='Header__content'>
-           <div className='Header__logo'>Logo</div>
-           <nav className='Header__navigation'>
-            <ul className='Header__list'>
-                <li><a className='Header__item' href='/zoomath'> Главная</a> </li>
-                <li><a className='Header__item' href='#'>Не главная</a></li>
-            </ul>
-           </nav>
-           <button>Войти</button>
-           </div>
+        <section className={styles.header}>
+            <div className={styles.container}>
+                <div className={styles.logo}>LOGO</div>
+                <nav>
+                    <ul className={styles.list}>
+                        <li><a href='#'>Подписка</a></li>
+                        <li><a href='#'>О лицеях</a></li>
+                        <li><a href='#'>Отзывы</a></li>
+                    </ul>
+                </nav>
+                <Link to='/signin' className={styles.btn_login}><img src={IconUser} alt='userLogin' className={styles.icon_user} />Войти</Link>
+            </div>
         </section>
     );
 }

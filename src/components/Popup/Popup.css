@@ -35,11 +35,11 @@
     height: 700px;
     width: 800px;
     position: relative;
+    overflow-y: scroll;
+
   }
 
-  .text{
-    color: #000;
-    font-weight: 400;
-    font-size: 24px;
-    list-style: 1.5;
-  }
+.solution{
+height: 900px;
+  object-fit: contain;
+}

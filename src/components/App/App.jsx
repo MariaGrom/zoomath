@@ -2,19 +2,17 @@
 import React from 'react';
 import './App.css';
 import { Route, Routes } from 'react-router-dom';
-import Main from '../Main/Main';
 import CardAlgebra from '../CardAlgebra/CardAlgebra';
-import ProfileAlgebra from '../Main/ProfileAlgebra/ProfileAlgebra';
-import ProfileGeometry from '../Main/ProfileGeometry/ProfileGeometry';
+import ProfileAlgebra from '../AboutProject/ProfileAlgebra/ProfileAlgebra';
 import Header from '../Header/Header';
 import Footer from '../Footer/Footer';
 import BaseTasksAlgebra from '../BaseTasksAlgebra/BaseTasksAlgebra';
-import BaseTasksGeometry from '../BaseTasksGeometry/BaseTasksGeometry';
 import TheoryAlgebra from '../TheoryAlgebra/TheoryAlgebra';
 import TestAlgebra from '../TestAlgebra/TestAlgebra';
-import TestGeometry from '../TestGeometry/TestGeometry';
-import TheoryGeometry from '../TheoryGeometry/TheoryGeometry';
-import CardGeometry from '../CardGeometry/CardGeometry';
+import Register from '../Register/Register';
+import Login from '../Login/Login';
+import AboutProject from '../AboutProject/AboutProject';
+
 
 
 function App() {
@@ -23,18 +21,15 @@ function App() {
       <Header />
       <Routes>
 
-        <Route path='/zoomath' element={<Main />}/>
+        <Route path='/zoomath' element={<AboutProject />} />
         <Route path='/algebra/base' element={<BaseTasksAlgebra />} />
         {/* к кард  path='/algebra/base/card' нужно добавить id каждой карточки, когда загружу что-то на бэк*/}
         <Route path='/algebra/base/card' element={<CardAlgebra />} />
         <Route path='/algebra' element={<ProfileAlgebra />} />
-        <Route path='/geometry' element={<ProfileGeometry />} />
         <Route path='/algebra/theory' element={<TheoryAlgebra />} />
         <Route path='/algebra/test' element={<TestAlgebra />} />
-        <Route path='/geometry/theory' element={<TheoryGeometry />} />
-        <Route path='/geometry/test' element={<TestGeometry />} />
-        <Route path='/geometry/base' element={< BaseTasksGeometry/>} />
-        <Route path='/geometry/base/card' element={<CardGeometry />} />
+        <Route path='/signup' element={<Register />} />
+        <Route path='signin' element={<Login />} />
       </Routes>
       <Footer />
     </div>

@@ -11,26 +11,14 @@ function BaseTasksAlgebra() {
                 <ul className='BaseTasks-list'>
                     <li><Link className='BaseTasks-link BaseTasks-card' to='/algebra/base/card'> Подраздел </Link></li>
                     <li><Link className='BaseTasks-link BaseTasks-card' to='/algebra/base/card'> Подраздел</Link></li>
-                    <li><Link className='BaseTasks-link BaseTasks-card' to='/algebra/base/card'> Подраздел</Link></li>
-                    <li><Link className='BaseTasks-link BaseTasks-card' to='/algebra/base/card'> Подраздел</Link></li>
-                    <li><Link className='BaseTasks-link BaseTasks-card' to='/algebra/base/card'> Подраздел</Link></li>
-                    <li><Link className='BaseTasks-link BaseTasks-card' to='/algebra/base/card'> Подраздел</Link></li>
                 </ul>
                 <h4 className='BaseTasks-subtitle'>Раздел 2</h4>
                 <ul className='BaseTasks-list'>
                     <li><Link className='BaseTasks-link BaseTasks-card' to='/algebra/base/card'> Подраздел №1</Link></li>
                     <li><Link className='BaseTasks-link BaseTasks-card' to='/algebra/base/card'> Подраздел №1</Link></li>
-                    <li><Link className='BaseTasks-link BaseTasks-card' to='/algebra/base/card'> Подраздел №1</Link></li>
-                    <li><Link className='BaseTasks-link BaseTasks-card' to='/algebra/base/card'> Подраздел №1</Link></li>
-                    <li><Link className='BaseTasks-link BaseTasks-card' to='/algebra/base/card'> Подраздел №1</Link></li>
-                    <li><Link className='BaseTasks-link BaseTasks-card' to='/algebra/base/card'> Подраздел №1</Link></li>
                 </ul>
                 <h4 className='BaseTasks-subtitle'>Раздел 3</h4>
                 <ul className='BaseTasks-list'>
-                    <li><Link className='BaseTasks-link BaseTasks-card' to='/algebra/base/card'> Подраздел №1</Link></li>
-                    <li><Link className='BaseTasks-link BaseTasks-card' to='/algebra/base/card'> Подраздел №1</Link></li>
-                    <li><Link className='BaseTasks-link BaseTasks-card' to='/algebra/base/card'> Подраздел №1</Link></li>
-                    <li><Link className='BaseTasks-link BaseTasks-card' to='/algebra/base/card'> Подраздел №1</Link></li>
                     <li><Link className='BaseTasks-link BaseTasks-card' to='/algebra/base/card'> Подраздел №1</Link></li>
                     <li><Link className='BaseTasks-link BaseTasks-card' to='/algebra/base/card'> Подраздел №1</Link></li>
                 </ul>

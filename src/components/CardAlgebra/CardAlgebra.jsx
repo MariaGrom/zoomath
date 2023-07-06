@@ -1,50 +1,52 @@
 import React, { useEffect, useState } from "react";
 import "./CardAlgebra.css";
 import { Card } from "../Card/Card";
+import solution from "../../img/Снимок экрана 2023-06-23 в 21.28.33.png"
 
 function CardAlgebra() {
   // тестовый вариант зареганового пользователя
 
-  const [loggedIn, setLoggedIn] = useState(false);
+  const [loggedIn, setLoggedIn] = useState(true);
 
   // захардкоженные карточки, больше не нужны 
-  //   const [tasks, setTasks] = useState([
-  //     {
-  //       id: 1,
-  //       title: "easy карточка",
-  //       skill: "easy",
-  //     },
-  //     {
-  //       id: 2,
-  //       title: "middle карточка",
-  //       skill: "middle",
-  //     },
-  //     {
-  //       id: 3,
-  //       title: "hard карточка",
-  //       skill: "hard",
-  //     },
-  //     {
-  //       id: 4,
-  //       title: "super-hard карточка",
-  //       skill: "super-hard",
-  //     },
-  //     {
-  //       id: 5,
-  //       title: "middle 5 карточка",
-  //       skill: "middle",
-  //     },
-  //     {
-  //       id: 6,
-  //       title: "middle 5 карточка",
-  //       skill: "middle-log",
-  //     },
-  //   ]);
+  // const [tasks, setTasks] = useState([
+  //   {
+  //     _id: 1,
+  //     title: "easy карточка",
+  //     skill: "easy",
+  //     solution: `${solution}`,
+  //   },
+  //   {
+  //     _id: 2,
+  //     title: "middle карточка",
+  //     skill: "middle",
+  //   },
+  //   {
+  //     _id: 3,
+  //     title: "hard карточка",
+  //     skill: "hard",
+  //   },
+  //   {
+  //     _id: 4,
+  //     title: "super-hard карточка",
+  //     skill: "super-hard",
+  //   },
+  //   {
+  //     _id: 5,
+  //     title: "middle 5 карточка",
+  //     skill: "middle",
+  //   },
+  //   {
+  //     _id: 6,
+  //     title: "middle 5 карточка",
+  //     skill: "middle-log",
+  //   },
+  // ]);
 
 
   const [tasks, setTasks] = useState([]);
 
-  //   пробный запрос данных с локального сервера через fetch
+  // пробный запрос данных с локального сервера через fetch
   useEffect(() => {
     fetch("http://localhost:3003/algebra/base/card", {
       headers: {
@@ -70,11 +72,11 @@ function CardAlgebra() {
       });
   }, []);
 
-  console.log("tasks", tasks);
+  // console.log("tasks", tasks);
 
   const [filteredTasks, setFilteredTasks] = useState(tasks);
 
-  console.log("filteredTasks", filteredTasks);
+  // console.log("filteredTasks", filteredTasks);
 
   function taskFilter(skill) {
     if (skill === "all") {
