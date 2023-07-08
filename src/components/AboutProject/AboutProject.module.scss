@@ -1,4 +1,5 @@
 @import '../../styles/colors.scss';
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@600&family=Noto+Sans:wght@300;500;600;700&display=swap');
 
 .content {
     background-color: $white;
@@ -9,15 +10,16 @@
 .container {
     margin: 0 auto;
     padding: 0;
-    border: 1px solid red;
+    // border: 1px solid red;
     display: flex;
     flex-direction: column;
     width: calc(100% - 2 * 60px);
     align-items: center;
-    color: $violet;
+
 
     .titles {
         width: 90%;
+        color: $violet;
     }
 }
 
@@ -31,7 +33,7 @@
     font-weight: 400;
 }
 
-.cards_container {
+.cards__container {
     width: 100%;
     margin: 0 auto;
     display: grid;
@@ -41,6 +43,124 @@
     justify-content: center;
 }
 
-.cards_list {
+.cards {
     width: 100%;
+    margin-top: 30px;
+}
+
+
+.test {
+    // border: 1px solid red;
+    width: 100%;
+    margin-top: 70px;
+
+    &__container {
+        position: relative;
+        width: 500px;
+        // border: 1px solid red;
+        height: 208px;
+        display: flex;
+        align-items: center;
+    }
+
+    &__discription {
+        display: flex;
+        flex-direction: row-reverse;
+        align-items: flex-end;
+        position: absolute;
+        top: -60px;
+        right: -331px;
+    }
+
+    &__text {
+        font-family: 'Caveat', sans-serif;
+        font-size: 28px;
+        text-transform: uppercase;
+        color: $black;
+    }
+
+    &__btn {
+        width: 500px;
+        height: 88px;
+        border: none;
+        background-color: $orange;
+        border-radius: 20px;
+        color: $white;
+        font-weight: 700;
+        text-transform: uppercase;
+        font-size: 30px;
+        cursor: pointer;
+        transition: background-color 0.4s linear;
+    }
+
+    &__btn:hover {
+        background-color: $dark_orange;
+        transform: all 0.7;
+    }
+}
+
+.example {
+    // border: 1px solid red;
+    background-color: $violet;
+    width: 100%;
+    padding-top: 60px;
+
+    &__discription {
+        color: $white;
+    }
+
+    &__slider {
+        display: flex;
+        align-items: center;
+    }
+
+    &__card {
+        width: 1120px;
+        height: 352px;
+        background-color: $white;
+        border-radius: 20px;
+        position: relative;
+    }
+
+    &__sliderLeft,
+    &__sliderRight,
+    &__bookmark,
+    &__done,
+    &__like {
+        background-color: transparent;
+        border: none;
+    }
+
+    &__bookmark {
+        background-image: url('../../img/bookmark.svg');
+        width: 40px;
+        height: 48px;
+        background-size: 56px 70px;
+        background-position: center;
+        background-repeat: no-repeat;
+        position: absolute;
+        top: 0;
+        left: 30px;
+    }
+
+    &__done {
+        background-image: url('../../img/task_done.svg');
+        width: 40px;
+        height: 40px;
+        background-size: 40px 40px;
+        background-position: center;
+        background-repeat: no-repeat;
+        position: absolute;
+        top: 3px;
+        left: 72px;
+    }
+
+    &__like {
+        background-image: url('../../img/like.svg');
+        width: 40px;
+        height: 40px;
+        background-size: 40px 40px;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
 }

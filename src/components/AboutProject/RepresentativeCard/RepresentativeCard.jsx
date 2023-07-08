@@ -2,7 +2,7 @@ import styles from './RepresentativeCard.module.scss';
 
 function RepresentativeCard(props) {
 
-    const { title } = props;
+    const { title, discription } = props;
     return (
         <div className={styles.card_rotation}>
             <div className={styles.front}>
@@ -10,7 +10,7 @@ function RepresentativeCard(props) {
             </div>
             <div className={styles.back}>
                 <div className={styles.back_content}>
-                    <h2 className={styles.title}>kvegcvkdsh</h2>
+                    <h2 className={styles.title}>{discription}</h2>
                 </div>
 
             </div>

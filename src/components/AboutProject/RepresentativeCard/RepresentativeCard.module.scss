@@ -1,10 +1,11 @@
 @import '../../../styles/colors.scss';
 
 .card_rotation {
-    width: 300px;
+    width: 100%;
     height: 100%;
     position: relative;
     perspective: 1000px;
+
 }
 
 .front,
@@ -14,21 +15,30 @@
     position: absolute;
     top: 0;
     left: 0;
-    transition: 0.8s;
+    transition: 1.5s;
     backface-visibility: hidden;
+    border-radius: 0 20px 0 20px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
 }
 
 .front {
-    background-color: aqua;
+    background-image: url('../../../img/card-test.svg');
     z-index: 100;
+    color: $black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .back {
-    background-color: chartreuse;
+    background-color: $violet;
     z-index: 1;
     opacity: 0;
-
+    color: $white;
     transform: rotateY(180deg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .card_rotation:hover .front {

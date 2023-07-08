@@ -31,7 +31,7 @@ function App() {
         <Route path='/signup' element={<Register />} />
         <Route path='signin' element={<Login />} />
       </Routes>
-      <Footer />
+      {/* <Footer /> */}
     </div>
   );
 }
