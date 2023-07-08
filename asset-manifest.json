@@ -1,13 +1,23 @@
 {
   "files": {
-    "main.css": "/zoomath/static/css/main.22c17e16.css",
-    "main.js": "/zoomath/static/js/main.59c9aba6.js",
+    "main.css": "/zoomath/static/css/main.668f70f0.css",
+    "main.js": "/zoomath/static/js/main.bc8f7e0d.js",
+    "static/media/Снимок экрана 2023-06-23 в 21.28.33.png": "/zoomath/static/media/Снимок экрана 2023-06-23 в 21.28.33.f160bd782abf2358eaeb.png",
+    "static/media/task_done.svg": "/zoomath/static/media/task_done.26e2a3faeea55aa78bc0.svg",
+    "static/media/stat.svg": "/zoomath/static/media/stat.4914d51d4aaf9d9dee02b5f390eeccd2.svg",
+    "static/media/test_arrow.svg": "/zoomath/static/media/test_arrow.9e4c7990d4b76520a69e3298213c82b8.svg",
+    "static/media/user-login.svg": "/zoomath/static/media/user-login.f83bf9593a10876297f9acbf2b25473a.svg",
+    "static/media/card-test.svg": "/zoomath/static/media/card-test.f59630c6e7e3ad67d426.svg",
+    "static/media/like.svg": "/zoomath/static/media/like.5222f82ba0cc390387b8.svg",
+    "static/media/slider_left.svg": "/zoomath/static/media/slider_left.8559bbcb9e1c51a7a93021c769ca1f8d.svg",
+    "static/media/slider_right.svg": "/zoomath/static/media/slider_right.b48914911233853b5645ebbec0a77670.svg",
     "index.html": "/zoomath/index.html",
-    "main.22c17e16.css.map": "/zoomath/static/css/main.22c17e16.css.map",
-    "main.59c9aba6.js.map": "/zoomath/static/js/main.59c9aba6.js.map"
+    "static/media/bookmark.svg": "/zoomath/static/media/bookmark.6ba274c1ad6c2dc639f8.svg",
+    "main.668f70f0.css.map": "/zoomath/static/css/main.668f70f0.css.map",
+    "main.bc8f7e0d.js.map": "/zoomath/static/js/main.bc8f7e0d.js.map"
   },
   "entrypoints": [
-    "static/css/main.22c17e16.css",
-    "static/js/main.59c9aba6.js"
+    "static/css/main.668f70f0.css",
+    "static/js/main.bc8f7e0d.js"
   ]
 }
