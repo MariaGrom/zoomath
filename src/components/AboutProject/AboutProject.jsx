@@ -30,7 +30,7 @@ function AboutProject() {
                 <div className={styles.container}>
                     <div className={styles.test__container}>
                         <div className={styles.test__discription}>
-                            <p className={styles.test__text}>Пройди тест и узнай<br />насколько ты готов</p>
+                            <p className={styles.test__text}>Пройди тест и узнай,<br />насколько ты готов</p>
                             <img className={styles.test__arrow} src={IconArrow} alt='Тест' />
                         </div>
                         <button className={styles.test__btn}>
@@ -52,8 +52,28 @@ function AboutProject() {
                         <div className={styles.example__card}>
                             <button type='button' className={styles.example__bookmark}></button>
                             <button type='button' className={styles.example__done}></button>
-                            <button type='button' className={styles.example__like}></button>
-                            <img src={IconStat} alt='statistics' />
+
+                            <div className={styles.example__complexity}>
+                                <p >middle</p>
+                            </div>
+                            <div className={styles.example__task}>
+                                <p>Ленту длиной в 60м. разделили в отношении 2:3, а затем от меньшей части отрезали 0,4 её длины.
+                                    Сколько процентов от всей длины ленты составляет длина меньшей из полученных частей?</p>
+                                <div className={styles.example__statistics}>
+                                    <div className={styles.example__statisticsLike}>
+                                        <button type='button' className={styles.example__like}></button>
+                                        <p>124</p>
+                                    </div>
+                                    <div className={styles.example__statisticsDecisions}>
+                                        <div>
+                                            <img src={IconStat} alt='statistics' />
+                                            <p>67%</p>
+                                        </div>
+                                        <p>решили эту задачу</p>
+                                    </div>
+                                </div>
+
+                            </div>
 
                             <div className={styles.example__btns}>
                                 <button type='button' className={styles.example__btn}>решение</button>
