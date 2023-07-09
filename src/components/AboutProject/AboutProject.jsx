@@ -7,6 +7,7 @@ import IconArrow from '../../img/test_arrow.svg';
 import IconSliderLeft from '../../img/slider_left.svg';
 import IconSliderRight from '../../img/slider_right.svg';
 import IconStat from '../../img/stat.svg';
+import Footer from '../Footer/Footer';
 
 function AboutProject() {
     return (
@@ -88,8 +89,37 @@ function AboutProject() {
 
             </section>
 
+            <section className={styles.solution}>
+                <div className={styles.solution__container}>
+                    <div className={styles.solution__text}>
+                        <div className={styles.solution__substrate}>
+                            <p>Описание какие же у нас классные текстовые решения</p>
+                            <div className={styles.solution__img}></div>
+                        </div>
+                    </div>
+                    <div className={styles.solution__theory}>
+                        <div className={styles.solution__substrate}>
+                            <p>Описание какие же у нас ОТЛИЧНАЯ теория</p>
 
+                        </div>
+                    </div>
+                    <div className={styles.solution__video}>
+                        <div className={styles.solution__substrateVideo}>
+                            <p>Описание наших видео объяснений</p>
 
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section className={styles.news}>
+
+            </section>
+            <section className={styles.statistic}>
+
+            </section>
+
+            <Footer />
         </main>
     );
 }
