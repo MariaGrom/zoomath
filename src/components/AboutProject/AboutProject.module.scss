@@ -63,13 +63,14 @@
         align-items: center;
     }
 
-    &__discription {
+    &__pointer {
         display: flex;
         flex-direction: row-reverse;
         align-items: flex-end;
         position: absolute;
         top: -60px;
         right: -331px;
+
     }
 
     &__text {
@@ -90,12 +91,14 @@
         text-transform: uppercase;
         font-size: 30px;
         cursor: pointer;
-        transition: background-color 0.4s linear;
+        transition: all 1s ease;
     }
 
     &__btn:hover {
-        background-color: $dark_orange;
-        // transform: all 0.7;
+        background-color: $white;
+        color: $orange;
+        box-shadow: inset 0 0 0 3px $orange;
+
     }
 }
 
@@ -108,6 +111,12 @@
 
     &__discription {
         color: $white;
+        width: 800px;
+
+        p {
+            margin: 0;
+            padding: 20px 0;
+        }
     }
 
     &__slider {
@@ -116,7 +125,7 @@
     }
 
     &__card {
-        width: 1120px;
+        width: 1100px;
         height: 352px;
         background-color: $white;
         border-radius: 20px;
@@ -273,7 +282,7 @@
 
 .solution {
     width: 100%;
-    border: 1px solid red;
+    padding-top: 100px;
     background-color: $violet;
 
     &__container {
@@ -283,54 +292,125 @@
         grid-template-areas:
             "textual theory"
             "video video";
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: 750px 530px;
+        grid-template-columns: 530px 530px;
+        grid-template-rows: 750px 450px;
         gap: 40px;
-
+        justify-content: center;
     }
 
     &__text {
         grid-area: textual;
-        border: 1px solid red;
+        // border: 1px solid red;
         align-self: start;
     }
 
     &__theory {
         grid-area: theory;
-        border: 1px solid red;
+        // border: 1px solid red;
         align-self: end;
     }
 
     &__video {
-        height: 530px;
+        height: 450px;
         grid-area: video;
-        border: 1px solid red;
-
+        // border: 1px solid red;
     }
 
-    &__substrate {
+    &__substrateText,
+    &__substrateTheory {
         background-color: $blue;
         height: 583px;
-        justify-content: center;
-        flex-direction: column;
         border-radius: 20px;
         padding: 0 10px 10px;
         box-sizing: content-box;
+        position: relative;
+    }
+
+    &__pointerText,
+    &__pointerTheory,
+    &__pointerVideo {
+        position: absolute;
+        display: flex;
+        align-items: flex-end;
+    }
+
+    &__pointerText {
+        height: 113px;
+        top: -115px;
+        left: 0;
+    }
+
+    &__pointerTheory {
+        top: -92px;
+        right: 0;
+        height: 90px;
+        flex-direction: row-reverse;
+    }
+
+    &__pointerVideo {
+        top: -102px;
+        left: 0;
+        height: 100px;
     }
 
     &__substrateVideo {
         height: 400px;
         background-color: $blue;
         width: 100%;
+        border-radius: 20px;
+        position: relative;
+        padding: 0 20px;
     }
 
+    &__arrowTitle {
+        font-family: 'Caveat', sans-serif;
+        font-size: 28px;
+        text-transform: uppercase;
+        color: $white;
+        padding: 0 5px 0 0 !important;
+        margin: 0 !important;
+        align-self: start;
+    }
+
+    &__discription {
+        margin: 0;
+        padding: 20px 0;
+    }
+
+}
+
+.video {
+    width: 100%;
+    // border: 1px solid red;
+    display: flex;
+    justify-content: space-between;
+
+    &__content {
+        width: 700px;
+        height: 320px;
+        border-radius: 20px;
+        // border: 1px solid red;
+        background-color: $white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    &__timeCode {
+        width: 320px;
+        height: 320px;
+        border-radius: 20px;
+        // border: 1px solid red;
+        background-color: $white;
+        padding: 20px 0;
+    }
 }
 
 
 .solution__img {
     background-image: url('../../img/textsolution.jpg');
     width: 100%;
-    height: 530px;
+    height: 508px;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -340,6 +420,14 @@
 
 .news {
     width: 100%;
-    height: 300px;
+    height: 150px;
     background: $black;
+    color: $blue;
+}
+
+.statistic {
+    width: 100%;
+    height: 150px;
+    background: $black;
+    color: $blue;
 }

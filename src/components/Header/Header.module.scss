@@ -25,6 +25,14 @@
         padding: 0 10px;
         text-decoration: none;
         color: $violet;
+        font-weight: 500;
+        transition: all 0.5s ease;
+
+    }
+
+    a:hover {
+        color: $orange;
+
     }
 }
 

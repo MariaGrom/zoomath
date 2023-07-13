@@ -19,6 +19,7 @@ function App() {
   return (
     <div className="App">
       <Header />
+      {/* <AboutProject /> */}
       <Routes>
 
         <Route path='/zoomath' element={<AboutProject />} />

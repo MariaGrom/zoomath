@@ -3,18 +3,22 @@ import styles from './AboutProject.module.scss';
 import QuestionBank from './RepresentativeCard/QuestionBank/QuestionBank';
 import TheoreticalBase from './RepresentativeCard/TheoreticalBase/TheoreticalBase';
 import TestPapers from './RepresentativeCard/TestPapers/TestPapers';
+import Footer from '../Footer/Footer';
 import IconArrow from '../../img/test_arrow.svg';
 import IconSliderLeft from '../../img/slider_left.svg';
 import IconSliderRight from '../../img/slider_right.svg';
 import IconStat from '../../img/stat.svg';
-import Footer from '../Footer/Footer';
+import IconArrowAnswer from '../../img/arrow_answer.svg';
+import IconArrowTheory from '../../img/arrow_theory.svg';
+import IconArrowVideo from '../../img/arrow_video.svg';
+import IconPlay from '../../img/icon_play.svg';
 
 function AboutProject() {
     return (
         <main className={styles.content}>
             <div className={styles.container}>
                 <div className={styles.titles}>
-                    <h1 className={styles.title}> Заголовок сайта</h1>
+                    <h1 className={styles.title}>Полезный ресур по подготовке к поступлению в лучшие лицеи</h1>
                     <h2 className={styles.subtitle}>Интересный текст - почему мы молодцы и какие хорошие.
                         Интнресный текст - почему мы молодцы.Интнресный текст - почему мы молодцы и какие хорошие.
                     </h2>
@@ -30,9 +34,9 @@ function AboutProject() {
             <section className={styles.test}>
                 <div className={styles.container}>
                     <div className={styles.test__container}>
-                        <div className={styles.test__discription}>
+                        <div className={styles.test__pointer}>
                             <p className={styles.test__text}>Пройди тест и узнай,<br />насколько ты готов</p>
-                            <img className={styles.test__arrow} src={IconArrow} alt='Тест' />
+                            <img className={styles.test__arrow} src={IconArrow} alt='test' />
                         </div>
                         <button className={styles.test__btn}>
                             Узнать свой уровень
@@ -43,13 +47,17 @@ function AboutProject() {
 
             <section className={styles.example}>
                 <div className={styles.container}>
+
                     <div className={styles.example__discription}>
-                        <h2>Заголовок описания функционала</h2>
-                        <p>Проверь уровень своей подготовки, пройдя тест составленный на основании типовых задачах вступительных экзаменов</p>
-                        <p>Проверь уровень своей подготовки, пройдя тест составленный на основании типовых задачах вступительных экзаменов</p>
+                        <h2>Практика отдельных тем и контрольные работы</h2>
+                        <p> Тысячи вопросов в стиле отдельных заданий, отфильтрованных по теме, подтеме и сложности.
+                            Вступительные контрольные работы прошлых лет.
+                            Практикуйтесь и готовьтесь к поступлению в лучшие лицеи Москвы в удобном для вас графике!
+                        </p>
                     </div>
+
                     <div className={styles.example__slider}>
-                        <button className={styles.example__sliderLeft}><img src={IconSliderLeft} alt='SliderLeft' /></button>
+                        <button className={styles.example__sliderLeft}><img src={IconSliderLeft} alt='sliderLeft' /></button>
                         <div className={styles.example__card}>
                             <button type='button' className={styles.example__bookmark}></button>
                             <button type='button' className={styles.example__done}></button>
@@ -58,7 +66,7 @@ function AboutProject() {
                                 <p >middle</p>
                             </div>
                             <div className={styles.example__task}>
-                                <p>Ленту длиной в 60м. разделили в отношении 2:3, а затем от меньшей части отрезали 0,4 её длины.
+                                <p>Ленту длиной в 60 метров разделили в отношении 2:3, а затем от меньшей части отрезали 0,4 её длины.
                                     Сколько процентов от всей длины ленты составляет длина меньшей из полученных частей?</p>
                                 <div className={styles.example__statistics}>
                                     <div className={styles.example__statisticsLike}>
@@ -82,44 +90,65 @@ function AboutProject() {
                                 <button type='button' className={styles.example__btn}>теория</button>
                             </div>
                         </div>
-                        <button className={styles.example__sliderRight}><img src={IconSliderRight} alt='SliderRigth' /></button>
+                        <button className={styles.example__sliderRight}><img src={IconSliderRight} alt='sliderRigth' /></button>
                     </div>
 
                 </div>
 
             </section>
-
             <section className={styles.solution}>
                 <div className={styles.solution__container}>
                     <div className={styles.solution__text}>
-                        <div className={styles.solution__substrate}>
-                            <p>Описание какие же у нас классные текстовые решения</p>
+                        <div className={styles.solution__substrateText}>
+                            <div className={styles.solution__pointerText}>
+                                <p className={styles.solution__arrowTitle}>Решения</p>
+                                <img className={styles.solution__arrow} src={IconArrowAnswer} alt='answer' />
+                            </div>
+                            <p className={styles.solution__discription}>Подробные и понятные решения в текстовом формате, со всеми рассуждениями по ходу решения.</p>
                             <div className={styles.solution__img}></div>
                         </div>
                     </div>
                     <div className={styles.solution__theory}>
-                        <div className={styles.solution__substrate}>
-                            <p>Описание какие же у нас ОТЛИЧНАЯ теория</p>
-
+                        <div className={styles.solution__substrateTheory}>
+                            <div className={styles.solution__pointerTheory}>
+                                <p className={styles.solution__arrowTitle}>Теория</p>
+                                <img className={styles.solution__arrow} src={IconArrowTheory} alt='theory' />
+                            </div>
+                            <p className={styles.solution__discription}>Вся необходимая теория, дающая ответы на все вопросы.</p>
+                            <div className={styles.solution__img}></div>
                         </div>
                     </div>
                     <div className={styles.solution__video}>
                         <div className={styles.solution__substrateVideo}>
-                            <p>Описание наших видео объяснений</p>
-
+                            <div className={styles.solution__pointerVideo}>
+                                <p className={styles.solution__arrowTitle}>Видео решения</p>
+                                <img className={styles.solution__arrow} src={IconArrowVideo} alt='Video' />
+                            </div>
+                            <p className={styles.solution__discription}>Видео решения с тайм-кодом - можно промотать сразу до того места, где возникли сложности в решении.</p>
+                            <div className={styles.video}>
+                                <div className={styles.video__content}>
+                                    <img src={IconPlay} />
+                                </div>
+                                <div className={styles.video__timeCode}>
+                                    <ul>
+                                        <li>2:45 - ntcn bkjhvhjk lsblhfvclhv bckvhfvg </li>
+                                    </ul>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </section>
 
             <section className={styles.news}>
-
+                Блок с новостями
             </section>
             <section className={styles.statistic}>
-
+                Блок со статистикой по продукивности сервиса
             </section>
 
             <Footer />
+
         </main>
     );
 }
