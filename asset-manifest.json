@@ -1,28 +1,31 @@
 {
   "files": {
-    "main.css": "/zoomath/static/css/main.1cf1b16e.css",
-    "main.js": "/zoomath/static/js/main.1863b7e8.js",
+    "main.css": "/zoomath/static/css/main.f6eec523.css",
+    "main.js": "/zoomath/static/js/main.e91fdc74.js",
     "static/media/Снимок экрана 2023-06-23 в 21.28.33.png": "/zoomath/static/media/Снимок экрана 2023-06-23 в 21.28.33.f160bd782abf2358eaeb.png",
     "static/media/textsolution.jpg": "/zoomath/static/media/textsolution.e6ff9f70ef8c3c68a0db.jpg",
     "static/media/task_done.svg": "/zoomath/static/media/task_done.26e2a3faeea55aa78bc0.svg",
     "static/media/stat.svg": "/zoomath/static/media/stat.4914d51d4aaf9d9dee02b5f390eeccd2.svg",
     "static/media/arrow_answer.svg": "/zoomath/static/media/arrow_answer.cddbc8ce6eea12ec8d768fcbe1d3ee0f.svg",
     "static/media/test_arrow.svg": "/zoomath/static/media/test_arrow.9e4c7990d4b76520a69e3298213c82b8.svg",
+    "static/media/cube-middle.svg": "/zoomath/static/media/cube-middle.beabb591aa16fc3c1d30feee4f0b5b92.svg",
     "static/media/user-login.svg": "/zoomath/static/media/user-login.f83bf9593a10876297f9acbf2b25473a.svg",
     "static/media/arrow_video.svg": "/zoomath/static/media/arrow_video.47fec268b8a1a900252a028cc4ea8577.svg",
     "static/media/card-test.svg": "/zoomath/static/media/card-test.f59630c6e7e3ad67d426.svg",
     "static/media/arrow_theory.svg": "/zoomath/static/media/arrow_theory.05bfa3f39ffb8fe393050b7fc4c368f0.svg",
     "static/media/icon_play.svg": "/zoomath/static/media/icon_play.0f52d6c858de1af27d0c3842b58c348f.svg",
+    "static/media/cube-easy.svg": "/zoomath/static/media/cube-easy.08c3a73d7c31af673d7f9cbbb6d4fa70.svg",
     "static/media/like.svg": "/zoomath/static/media/like.5222f82ba0cc390387b8.svg",
+    "static/media/cube-hard.svg": "/zoomath/static/media/cube-hard.a0b653b93d2ea708518bbc7f9da2b4f9.svg",
     "static/media/slider_left.svg": "/zoomath/static/media/slider_left.8559bbcb9e1c51a7a93021c769ca1f8d.svg",
     "static/media/slider_right.svg": "/zoomath/static/media/slider_right.b48914911233853b5645ebbec0a77670.svg",
     "index.html": "/zoomath/index.html",
     "static/media/bookmark.svg": "/zoomath/static/media/bookmark.6ba274c1ad6c2dc639f8.svg",
-    "main.1cf1b16e.css.map": "/zoomath/static/css/main.1cf1b16e.css.map",
-    "main.1863b7e8.js.map": "/zoomath/static/js/main.1863b7e8.js.map"
+    "main.f6eec523.css.map": "/zoomath/static/css/main.f6eec523.css.map",
+    "main.e91fdc74.js.map": "/zoomath/static/js/main.e91fdc74.js.map"
   },
   "entrypoints": [
-    "static/css/main.1cf1b16e.css",
-    "static/js/main.1863b7e8.js"
+    "static/css/main.f6eec523.css",
+    "static/js/main.e91fdc74.js"
   ]
 }
