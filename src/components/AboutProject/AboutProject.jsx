@@ -12,6 +12,9 @@ import IconArrowAnswer from '../../img/arrow_answer.svg';
 import IconArrowTheory from '../../img/arrow_theory.svg';
 import IconArrowVideo from '../../img/arrow_video.svg';
 import IconPlay from '../../img/icon_play.svg';
+import IconCubeEasy from '../../img/cube-easy.svg';
+import IconCubeMiddle from '../../img/cube-middle.svg';
+import IconCubeHard from '../../img/cube-hard.svg';
 
 function AboutProject() {
 
@@ -76,21 +79,24 @@ function AboutProject() {
                                     <div className={styles.accordion__level1}>
                                         <p>сложность</p>
                                         <h2>easy</h2>
-                                        <p>всплывающий текст при наведении</p>
+                                        <p className={styles.sinopsis}>всплывающий текст при наведении</p>
+                                        <img className={styles.accordion__img} src={IconCubeEasy} alt='cubeEasy' />
                                     </div>
                                 </li>
                                 <li>
                                     <div className={styles.accordion__level2}>
                                         <p>сложность</p>
                                         <h2>middle</h2>
-                                        <p>всплывающий текст при наведении</p>
+                                        <p className={styles.sinopsis}>всплывающий текст при наведении</p>
+                                        <img className={styles.accordion__img} src={IconCubeMiddle} alt='cubeMiddle' />
                                     </div>
                                 </li>
                                 <li>
                                     <div className={styles.accordion__level3}>
                                         <p>сложность</p>
                                         <h2>hard</h2>
-                                        <p>всплывающий текст при наведении</p>
+                                        <p className={styles.sinopsis}>всплывающий текст при наведении</p>
+                                        <img className={styles.accordion__img} src={IconCubeHard} alt='cubeHard' />
                                     </div>
                                 </li>
                             </ul>
@@ -104,20 +110,23 @@ function AboutProject() {
                                         <p>сложность</p>
                                         <h2>easy</h2>
                                         <p className={styles.sinopsis}>всплывающий текст при наведении</p>
+                                        <img className={styles.accordion__img} src={IconCubeEasy} alt='cubeEasy' />
                                     </div>
                                 </li>
                                 <li>
                                     <div className={styles.accordion__level2}>
                                         <p>сложность</p>
                                         <h2>middle</h2>
-                                        <p>всплывающий текст при наведении</p>
+                                        <p className={styles.sinopsis}>всплывающий текст при наведении</p>
+                                        <img className={styles.accordion__img} src={IconCubeMiddle} alt='cubeMiddle' />
                                     </div>
                                 </li>
                                 <li>
                                     <div className={styles.accordion__level3}>
                                         <p>сложность</p>
                                         <h2>hard</h2>
-                                        <p>всплывающий текст при наведении</p>
+                                        <p className={styles.sinopsis}>всплывающий текст при наведении</p>
+                                        <img className={styles.accordion__img} src={IconCubeHard} alt='cubeHard' />
                                     </div>
                                 </li>
                             </ul>
