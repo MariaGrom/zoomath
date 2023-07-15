@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import styles from './AboutProject.module.scss';
 import QuestionBank from './RepresentativeCard/QuestionBank/QuestionBank';
 import TheoreticalBase from './RepresentativeCard/TheoreticalBase/TheoreticalBase';
@@ -14,6 +14,28 @@ import IconArrowVideo from '../../img/arrow_video.svg';
 import IconPlay from '../../img/icon_play.svg';
 
 function AboutProject() {
+
+    const [isShow, setIsShow] = useState(false);
+
+    // function scrollToSection(id) {
+    //     const element = document.getElementById(id);
+    //     element.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+    // };
+
+    function scrollToSection() {
+
+
+        window.scrollBy({
+            top: 300,
+            behavior: "smooth"
+        });
+    }
+
+    function showAccordion() {
+        console.log('click')
+        setIsShow(true);
+        scrollToSection();
+    }
     return (
         <main className={styles.content}>
             <div className={styles.container}>
@@ -38,11 +60,71 @@ function AboutProject() {
                             <p className={styles.test__text}>Пройди тест и узнай,<br />насколько ты готов</p>
                             <img className={styles.test__arrow} src={IconArrow} alt='test' />
                         </div>
-                        <button className={styles.test__btn}>
+                        <button className={styles.test__btn} onClick={showAccordion}>
                             Узнать свой уровень
                         </button>
                     </div>
                 </div>
+
+                <div id="accordion" className={isShow ? styles.accordion : styles.accordionOff}>
+                    <div className={styles.accordion__container}>
+                        <div className={styles.accordion__class}>
+                            <h2>8 класс</h2>
+                            <h3> выбери уровень сложности</h3>
+                            <ul className={styles.accordion__listLevels}>
+                                <li>
+                                    <div className={styles.accordion__level1}>
+                                        <p>сложность</p>
+                                        <h2>easy</h2>
+                                        <p>всплывающий текст при наведении</p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div className={styles.accordion__level2}>
+                                        <p>сложность</p>
+                                        <h2>middle</h2>
+                                        <p>всплывающий текст при наведении</p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div className={styles.accordion__level3}>
+                                        <p>сложность</p>
+                                        <h2>hard</h2>
+                                        <p>всплывающий текст при наведении</p>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                        <div className={styles.accordion__class}>
+                            <h2>10 класс</h2>
+                            <h3> выбери уровень сложности</h3>
+                            <ul className={styles.accordion__listLevels}>
+                                <li>
+                                    <div className={styles.accordion__level1}>
+                                        <p>сложность</p>
+                                        <h2>easy</h2>
+                                        <p className={styles.sinopsis}>всплывающий текст при наведении</p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div className={styles.accordion__level2}>
+                                        <p>сложность</p>
+                                        <h2>middle</h2>
+                                        <p>всплывающий текст при наведении</p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div className={styles.accordion__level3}>
+                                        <p>сложность</p>
+                                        <h2>hard</h2>
+                                        <p>всплывающий текст при наведении</p>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
             </section>
 
             <section className={styles.example}>
