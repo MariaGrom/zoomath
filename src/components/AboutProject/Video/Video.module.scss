@@ -1,0 +1,29 @@
+@import '../../../styles/colors.scss';
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@600&family=Noto+Sans:wght@300;500;600;700&display=swap');
+
+.video {
+    width: 100%;
+    // border: 1px solid red;
+    display: flex;
+    justify-content: space-between;
+
+    &__content {
+        width: 700px;
+        height: 320px;
+        border-radius: 20px;
+        // border: 1px solid red;
+        background-color: $white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    &__timeCode {
+        width: 320px;
+        height: 320px;
+        border-radius: 20px;
+        // border: 1px solid red;
+        background-color: $white;
+        padding: 20px 0;
+    }
+}

@@ -3,7 +3,7 @@ import React from 'react';
 import './App.css';
 import { Route, Routes } from 'react-router-dom';
 import CardAlgebra from '../CardAlgebra/CardAlgebra';
-import ProfileAlgebra from '../AboutProject/ProfileAlgebra/ProfileAlgebra';
+import ProfileAlgebra from '../ProfileAlgebra/ProfileAlgebra';
 import Header from '../Header/Header';
 import Footer from '../Footer/Footer';
 import BaseTasksAlgebra from '../BaseTasksAlgebra/BaseTasksAlgebra';

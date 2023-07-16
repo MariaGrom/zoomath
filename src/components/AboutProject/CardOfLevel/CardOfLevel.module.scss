@@ -1,0 +1,18 @@
+.sinopsis {
+    position: relative;
+    transform: translateY(100px);
+    transition: .6s;
+    display: inline-block;
+    margin: 0;
+    padding-top: 15px;
+}
+
+.img {
+    position: absolute;
+    bottom: 4px;
+    right: 4px;
+}
+
+.accordion__level1:hover .sinopsis {
+    transform: translateY(0);
+}
