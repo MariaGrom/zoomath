@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import "./CardAlgebra.css";
-import { Card } from "../Card/Card";
 import solution from "../../img/Снимок экрана 2023-06-23 в 21.28.33.png"
+import NewCard from '../NewCard/NewCard';
 
 function CardAlgebra() {
   // тестовый вариант зареганового пользователя
@@ -12,7 +12,7 @@ function CardAlgebra() {
   const [tasks, setTasks] = useState([
     {
       _id: 1,
-      title: "easy карточка",
+      title: "Ленту длиной в 60 метров разделили в отношении 2:3, а затем от меньшей части отрезали 0,4 её длины. Сколько процентов от всей длины ленты составляет длина меньшей из полученных частей?",
       skill: "easy",
       solution: `${solution}`,
     },
@@ -160,7 +160,8 @@ function CardAlgebra() {
         </ul>
         <ul>
           {filteredTasks.map((task) => (
-            <Card key={task._id} task={task} />
+            // <Card key={task._id} task={task} />
+            <NewCard key={task._id} task={task} />
           ))}
         </ul>
       </div>
