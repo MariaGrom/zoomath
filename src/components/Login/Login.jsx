@@ -1,15 +1,15 @@
-import { PageForm } from '../PageForm/PageForm'
+import { FormPage } from "../../pages/PageForm/FormPage";
 
 function Login() {
-    return (
-        <PageForm
-            buttonText='Войти'
-            link='/zoomath'
-            textLink='Еще нет аккаунта?'
-            linkTo='/signup'
-            textLinkTo='Зарегистрироваться'
-        />
-    )
+  return (
+    <FormPage
+      buttonText="Войти"
+      link="/zoomath"
+      textLink="Еще нет аккаунта?"
+      linkTo="/signup"
+      textLinkTo="Зарегистрироваться"
+    />
+  );
 }
 
 export default Login;

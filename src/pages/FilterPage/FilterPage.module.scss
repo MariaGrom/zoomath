@@ -1,0 +1,19 @@
+@import "../../styles/colors.scss";
+
+.flexbox {
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 50px;
+}
+
+.item {
+  display: flex;
+  background: $violet;
+  width: auto;
+  border-radius: 20px;
+  align-items: center;
+  justify-content: center;
+  padding: 29px 22px;
+  color: $white;
+  max-width: 200px;
+}
