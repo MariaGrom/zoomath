@@ -1,0 +1,86 @@
+@import "../../styles/colors.scss";
+@import url("https://fonts.googleapis.com/css2?family=Caveat:wght@600&family=Noto+Sans:wght@300;500;600;700&display=swap");
+
+.mainLayout {
+  max-width: 1152px;
+  margin: 0 auto;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+
+  @media screen and (max-width: 1200px) {
+    max-width: 772px;
+  }
+}
+
+.infoblock {
+  display: flex;
+  padding: 48px;
+  background-color: $blue;
+  border-radius: 20px;
+  max-width: 750px;
+  flex-direction: column;
+  gap: 24px;
+  align-items: flex-start;
+  width: fit-content;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 110px;
+  column-gap: 24px;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  justify-items: stretch;
+}
+
+.subtitle {
+  font-size: 20px;
+  line-height: 24px;
+  color: $black;
+  justify-self: start;
+}
+
+.label {
+  background-color: transparent;
+  border-radius: 10px;
+  border: 1px solid $white;
+  padding: 10px 8px;
+  color: $white;
+}
+
+.text {
+  display: flex;
+  text-align: start;
+  font-size: 20px;
+  line-height: 24px;
+  color: $black;
+}
+
+.timer {
+  background-color: transparent;
+  border-radius: 10px;
+  border: 2px solid $orange;
+  padding: 10px 8px;
+  color: $orange;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: fit-content;
+  min-width: 262px;
+  align-self: center;
+
+  &__block {
+    display: flex;
+    align-items: center;
+  }
+
+  &__icon {
+    background-image: url("../../img/clock.svg");
+    background-repeat: no-repeat;
+    height: 40px;
+    width: 40px;
+  }
+}

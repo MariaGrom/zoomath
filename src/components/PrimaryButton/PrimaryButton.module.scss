@@ -1,0 +1,22 @@
+@import "../../styles/colors.scss";
+
+.defaultStyles {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: $dark_blue;
+  color: $white;
+  border-radius: 20px;
+  width: 184px;
+  height: 48px;
+  border: none;
+  font-weight: 400;
+  font-size: 24px;
+  cursor: pointer;
+  transition: background-color 0.4s linear;
+  color: $white;
+}
+
+.defaultStyles:hover {
+  background-color: $violet;
+}
