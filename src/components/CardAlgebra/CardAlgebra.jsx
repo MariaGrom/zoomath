@@ -1,48 +1,48 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import "./CardAlgebra.css";
-import solution from "../../img/Снимок экрана 2023-06-23 в 21.28.33.png"
-import NewCard from '../NewCard/NewCard';
+import NewCard from "../NewCard/NewCard";
+import { GEOMETRY_TASKS } from "../../mock/geometry/tasks";
 
 function CardAlgebra() {
   // тестовый вариант зареганового пользователя
 
   const [loggedIn, setLoggedIn] = useState(true);
 
-  // захардкоженные карточки, больше не нужны 
-  const [tasks, setTasks] = useState([
-    {
-      _id: 1,
-      title: "Ленту длиной в 60 метров разделили в отношении 2:3, а затем от меньшей части отрезали 0,4 её длины. Сколько процентов от всей длины ленты составляет длина меньшей из полученных частей?",
-      skill: "easy",
-      solution: `${solution}`,
-    },
-    {
-      _id: 2,
-      title: "middle карточка",
-      skill: "middle",
-    },
-    {
-      _id: 3,
-      title: "hard карточка",
-      skill: "hard",
-    },
-    {
-      _id: 4,
-      title: "super-hard карточка",
-      skill: "super-hard",
-    },
-    {
-      _id: 5,
-      title: "middle 5 карточка",
-      skill: "middle",
-    },
-    {
-      _id: 6,
-      title: "middle 5 карточка",
-      skill: "middle-log",
-    },
-  ]);
-
+  // захардкоженные карточки, больше не нужны
+  const [tasks, setTasks] = useState(
+    GEOMETRY_TASKS
+    // {
+    //   _id: 1,
+    //   title: "Ленту длиной в 60 метров разделили в отношении 2:3, а затем от меньшей части отрезали 0,4 её длины. Сколько процентов от всей длины ленты составляет длина меньшей из полученных частей?",
+    //   skill: "easy",
+    //   solution: `${solution}`,
+    // },
+    // {
+    //   _id: 2,
+    //   title: "middle карточка",
+    //   skill: "middle",
+    // },
+    // {
+    //   _id: 3,
+    //   title: "hard карточка",
+    //   skill: "hard",
+    // },
+    // {
+    //   _id: 4,
+    //   title: "super-hard карточка",
+    //   skill: "super-hard",
+    // },
+    // {
+    //   _id: 5,
+    //   title: "middle 5 карточка",
+    //   skill: "middle",
+    // },
+    // {
+    //   _id: 6,
+    //   title: "middle 5 карточка",
+    //   skill: "middle-log",
+    // },
+  );
 
   // const [tasks, setTasks] = useState([]);
 
@@ -88,7 +88,7 @@ function CardAlgebra() {
   }
 
   return (
-    <div className="Card">
+    <div className="MainLayout">
       <h3 className="Card-title">
         навигационная строка(если нужно) типа: Алгебра/база
         вопросов/9класс/задания по теме №1
@@ -158,12 +158,12 @@ function CardAlgebra() {
             </li>
           )}
         </ul>
-        <ul>
+        <div className="Card-list">
           {filteredTasks.map((task) => (
             // <Card key={task._id} task={task} />
             <NewCard key={task._id} task={task} />
           ))}
-        </ul>
+        </div>
       </div>
     </div>
   );

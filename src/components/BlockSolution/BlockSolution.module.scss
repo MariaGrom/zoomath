@@ -1,0 +1,42 @@
+@import "../../styles/colors.scss";
+
+.wrapper_card_solution {
+  display: flex;
+  box-shadow: 0 0 30px 0 rgba(101, 100, 219, 1);
+  border-radius: 20px;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 0 30px 0;
+}
+
+.img_solution {
+  width: 700px;
+}
+
+.theory {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  width: 792px;
+  gap: 10px 12px;
+}
+
+.theory_title {
+  color: $orange;
+  font-weight: 600;
+}
+
+.theory_tag {
+  display: flex;
+  border-radius: 20px;
+  padding: 8px 20px;
+  background-color: $blue;
+  align-items: center;
+  cursor: pointer;
+  transition: background-color 0.4s linear;
+
+  &:hover {
+    background-color: $blueHover;
+  }
+}
