@@ -1,4 +1,4 @@
-import test from "./solutions/test_1.jpg";
+import test from "./solutions/8-G2_1.jpg";
 
 export const GEOMETRY_TASKS = [
   {
