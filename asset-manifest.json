@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/zoomath/static/css/main.de1fbf80.css",
-    "main.js": "/zoomath/static/js/main.17aac5e8.js",
-    "static/media/test_1.jpg": "/zoomath/static/media/test_1.a8b3c0e3afbe2fde9442.jpg",
+    "main.js": "/zoomath/static/js/main.438518e1.js",
+    "static/media/8-G2_1.jpg": "/zoomath/static/media/8-G2_1.07419f2df0b219d8de00.jpg",
     "static/media/textsolution.jpg": "/zoomath/static/media/textsolution.e6ff9f70ef8c3c68a0db.jpg",
     "static/media/task_doNot.svg": "/zoomath/static/media/task_doNot.5cc715e2e468762c0a0d.svg",
     "static/media/task_done.svg": "/zoomath/static/media/task_done.26e2a3faeea55aa78bc0.svg",
@@ -26,10 +26,10 @@
     "static/media/bookmark_not.svg": "/zoomath/static/media/bookmark_not.d57ca95779ed250fdb0c.svg",
     "static/media/bookmark.svg": "/zoomath/static/media/bookmark.6ba274c1ad6c2dc639f8.svg",
     "main.de1fbf80.css.map": "/zoomath/static/css/main.de1fbf80.css.map",
-    "main.17aac5e8.js.map": "/zoomath/static/js/main.17aac5e8.js.map"
+    "main.438518e1.js.map": "/zoomath/static/js/main.438518e1.js.map"
   },
   "entrypoints": [
     "static/css/main.de1fbf80.css",
-    "static/js/main.17aac5e8.js"
+    "static/js/main.438518e1.js"
   ]
 }
