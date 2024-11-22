@@ -1,4 +1,4 @@
-import test from "./solutions/8-G2_1.jpg";
+import class_8_G2_1 from "./solutions/8-G2_1.jpg";
 
 export const GEOMETRY_TASKS = [
   {
@@ -6,9 +6,9 @@ export const GEOMETRY_TASKS = [
     collection: "geometry",
     theme: "трапеция",
     title:
-      "Наибольший угол прямоугольной трапеции равен , большая сторона равна 10. Найдите разность оснований.",
+      "Наибольший угол прямоугольной трапеции равен, большая сторона равна 10. Найдите разность оснований.",
     skill: "easy",
-    solution: `${test}`,
+    solution: `${class_8_G2_1}`,
     tags: [
       "параллелограмм",
       "трапеция",
