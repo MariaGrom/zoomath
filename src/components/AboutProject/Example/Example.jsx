@@ -3,7 +3,7 @@ import IconSliderLeft from "../../../img/slider_left.svg";
 import IconSliderRight from "../../../img/slider_right.svg";
 import IconStat from "../../../img/stat.svg";
 import NewCard from "../../NewCard/NewCard";
-import { GEOMETRY_TASKS } from "../../../mock/geometry/tasks";
+import { GEOMETRY_TASKS } from "../../../mock/geometry/geometry_tasks";
 
 function Example() {
   return (

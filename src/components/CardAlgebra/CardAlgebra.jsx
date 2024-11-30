@@ -1,48 +1,20 @@
 import React, { useState } from "react";
 import "./CardAlgebra.css";
 import NewCard from "../NewCard/NewCard";
-import { GEOMETRY_TASKS } from "../../mock/geometry/tasks";
+import { GEOMETRY_TASKS } from "../../mock/geometry/geometry_tasks";
+import MathJaxRenderer from "../MathJaxRenderer/MathJaxRenderer";
+
+import ReactMarkdown from "react-markdown";
+import remarkMath from "remark-math";
+import rehypeKatex from "rehype-katex";
+import "katex/dist/katex.min.css";
 
 function CardAlgebra() {
   // тестовый вариант зареганового пользователя
-
   const [loggedIn, setLoggedIn] = useState(true);
 
   // захардкоженные карточки, больше не нужны
-  const [tasks, setTasks] = useState(
-    GEOMETRY_TASKS
-    // {
-    //   _id: 1,
-    //   title: "Ленту длиной в 60 метров разделили в отношении 2:3, а затем от меньшей части отрезали 0,4 её длины. Сколько процентов от всей длины ленты составляет длина меньшей из полученных частей?",
-    //   skill: "easy",
-    //   solution: `${solution}`,
-    // },
-    // {
-    //   _id: 2,
-    //   title: "middle карточка",
-    //   skill: "middle",
-    // },
-    // {
-    //   _id: 3,
-    //   title: "hard карточка",
-    //   skill: "hard",
-    // },
-    // {
-    //   _id: 4,
-    //   title: "super-hard карточка",
-    //   skill: "super-hard",
-    // },
-    // {
-    //   _id: 5,
-    //   title: "middle 5 карточка",
-    //   skill: "middle",
-    // },
-    // {
-    //   _id: 6,
-    //   title: "middle 5 карточка",
-    //   skill: "middle-log",
-    // },
-  );
+  const [tasks, setTasks] = useState(GEOMETRY_TASKS);
 
   // const [tasks, setTasks] = useState([]);
 
@@ -75,8 +47,6 @@ function CardAlgebra() {
   // console.log("tasks", tasks);
 
   const [filteredTasks, setFilteredTasks] = useState(tasks);
-
-  // console.log("filteredTasks", filteredTasks);
 
   function taskFilter(skill) {
     if (skill === "all") {
@@ -159,8 +129,36 @@ function CardAlgebra() {
           )}
         </ul>
         <div className="Card-list">
-          {filteredTasks.map((task) => (
-            // <Card key={task._id} task={task} />
+          {/* <p>
+          При \(a \ne 0\) получается два корня уравнения \(ax^2 + bx + c = 0\),
+  для нахождения которых используют формулу
+  $${x}_{1,2} = {-b \pm \sqrt{b^2-4ac} \over 2a}.$$
+          </p> */}
+          <div>
+            {/* <h1>Математические формулы с LaTeX</h1>
+            <p>
+              Инлайн формула:{" "}
+              <MathJaxRenderer formula="a^2 + b^2 = c^2" inline />
+              <MathJaxRenderer
+                formula={
+                  "=\\frac{15^{2}-48\\sqrt[3]{36}}{\\frac{-b\\pm \\sqrt{b^{2}-4ac}}{2a}}"
+                }
+              />
+            </p> */}
+            {/* <p>Блочная формула:</p>
+            <MathJaxRenderer formula="E = mc^2" />
+            <MathJaxRenderer formula={"=\frac{15}{24}"} /> */}
+
+            {/* <MathJaxRenderer formula={"\\text{Привет}\\ x=\\frac{15}{24}"} /> */}
+          </div>
+
+          {/* <ReactMarkdown
+            children={markdownText[0].solution}
+            // remarkPlugins={[remarkMath]}
+            // rehypePlugins={[rehypeKatex]}
+          /> */}
+
+          {tasks.map((task) => (
             <NewCard key={task._id} task={task} />
           ))}
         </div>
