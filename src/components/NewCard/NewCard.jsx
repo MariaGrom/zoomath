@@ -9,7 +9,7 @@ function NewCard(props) {
   const { task, isExampleCard } = props;
   const navigate = useNavigate();
   // переменная состояния для демонстрации решения
-  const [isShowSolution, setIsShowSolution] = useState(true);
+  const [isShowSolution, setIsShowSolution] = useState(false);
   // переменная состояния для отметки сохранения задачи
   const [isSaveTask, setIsSaveTask] = useState(false);
   // переменная состояния для отметки выполненной задачи

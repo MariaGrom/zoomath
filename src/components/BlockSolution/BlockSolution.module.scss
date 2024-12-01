@@ -41,3 +41,16 @@
     background-color: $blueHover;
   }
 }
+
+.sourse {
+  border: 1px solid red;
+  display: flex;
+  justify-content: center;
+  display: grid;
+  grid-template-columns: minmax(100px, 400px) minmax(100px, 300px);
+  gap: 20px;
+}
+
+.solution {
+  border: 1px solid green;
+}
