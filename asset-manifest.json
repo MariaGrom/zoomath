@@ -1,8 +1,10 @@
 {
   "files": {
-    "main.css": "/zoomath/static/css/main.f43f10d6.css",
-    "main.js": "/zoomath/static/js/main.b89e0b04.js",
+    "main.css": "/zoomath/static/css/main.6d271b29.css",
+    "main.js": "/zoomath/static/js/main.8f78987f.js",
     "static/media/8-G2_1.jpg": "/zoomath/static/media/8-G2_1.07419f2df0b219d8de00.jpg",
+    "static/media/solution_image.png": "/zoomath/static/media/solution_image.01250c74a5151ac66fba.png",
+    "static/media/sourse_image.png": "/zoomath/static/media/sourse_image.144d1e15bf0290f87079.png",
     "static/media/textsolution.jpg": "/zoomath/static/media/textsolution.e6ff9f70ef8c3c68a0db.jpg",
     "static/media/KaTeX_AMS-Regular.ttf": "/zoomath/static/media/KaTeX_AMS-Regular.853be92419a6c3766b9a.ttf",
     "static/media/KaTeX_Main-Regular.ttf": "/zoomath/static/media/KaTeX_Main-Regular.9eba1d77abcf2aa6e94e.ttf",
@@ -81,16 +83,15 @@
     "static/media/like_not.svg": "/zoomath/static/media/like_not.aef9c3ccbfde9da97604.svg",
     "static/media/cube-hard.svg": "/zoomath/static/media/cube-hard.a0b653b93d2ea708518bbc7f9da2b4f9.svg",
     "index.html": "/zoomath/index.html",
-    "static/media/test_solution.md": "/zoomath/static/media/test_solution.7871e3925a8ec629cfd0.md",
     "static/media/slider_left.svg": "/zoomath/static/media/slider_left.8559bbcb9e1c51a7a93021c769ca1f8d.svg",
     "static/media/slider_right.svg": "/zoomath/static/media/slider_right.b48914911233853b5645ebbec0a77670.svg",
     "static/media/bookmark_not.svg": "/zoomath/static/media/bookmark_not.d57ca95779ed250fdb0c.svg",
     "static/media/bookmark.svg": "/zoomath/static/media/bookmark.6ba274c1ad6c2dc639f8.svg",
-    "main.f43f10d6.css.map": "/zoomath/static/css/main.f43f10d6.css.map",
-    "main.b89e0b04.js.map": "/zoomath/static/js/main.b89e0b04.js.map"
+    "main.6d271b29.css.map": "/zoomath/static/css/main.6d271b29.css.map",
+    "main.8f78987f.js.map": "/zoomath/static/js/main.8f78987f.js.map"
   },
   "entrypoints": [
-    "static/css/main.f43f10d6.css",
-    "static/js/main.b89e0b04.js"
+    "static/css/main.6d271b29.css",
+    "static/js/main.8f78987f.js"
   ]
 }
