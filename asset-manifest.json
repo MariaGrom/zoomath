@@ -1,10 +1,9 @@
 {
   "files": {
     "main.css": "/zoomath/static/css/main.6d271b29.css",
-    "main.js": "/zoomath/static/js/main.8f78987f.js",
+    "main.js": "/zoomath/static/js/main.e4c4d465.js",
     "static/media/8-G2_1.jpg": "/zoomath/static/media/8-G2_1.07419f2df0b219d8de00.jpg",
     "static/media/solution_image.png": "/zoomath/static/media/solution_image.01250c74a5151ac66fba.png",
-    "static/media/sourse_image.png": "/zoomath/static/media/sourse_image.144d1e15bf0290f87079.png",
     "static/media/textsolution.jpg": "/zoomath/static/media/textsolution.e6ff9f70ef8c3c68a0db.jpg",
     "static/media/KaTeX_AMS-Regular.ttf": "/zoomath/static/media/KaTeX_AMS-Regular.853be92419a6c3766b9a.ttf",
     "static/media/KaTeX_Main-Regular.ttf": "/zoomath/static/media/KaTeX_Main-Regular.9eba1d77abcf2aa6e94e.ttf",
@@ -88,10 +87,10 @@
     "static/media/bookmark_not.svg": "/zoomath/static/media/bookmark_not.d57ca95779ed250fdb0c.svg",
     "static/media/bookmark.svg": "/zoomath/static/media/bookmark.6ba274c1ad6c2dc639f8.svg",
     "main.6d271b29.css.map": "/zoomath/static/css/main.6d271b29.css.map",
-    "main.8f78987f.js.map": "/zoomath/static/js/main.8f78987f.js.map"
+    "main.e4c4d465.js.map": "/zoomath/static/js/main.e4c4d465.js.map"
   },
   "entrypoints": [
     "static/css/main.6d271b29.css",
-    "static/js/main.8f78987f.js"
+    "static/js/main.e4c4d465.js"
   ]
 }
