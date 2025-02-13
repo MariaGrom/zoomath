@@ -1,6 +1,6 @@
 import class_8_G2_1 from "./solutions/8-G2_1.jpg";
-import sourse_img from "./solutions/task_1/sourse_image.png";
-import solution_img from "./solutions//task_1/solution_image.png";
+import sourse_img from "./solutions/task_1/sourse_img.png";
+import solution_img from "./solutions/task_1/solution_image.png";
 // import f_1 from "./solutions/task_1/f_1.svg";
 import f_1 from "./solutions/task_1/f_1.png";
 import f_2 from "./solutions/task_1/f_2.png";
@@ -8,6 +8,10 @@ import f_3 from "./solutions/task_1/f_3.png";
 import f_4 from "./solutions/task_1/f_4.png";
 import f_5 from "./solutions/task_1/f_5.png";
 import f_6 from "./solutions/task_1/f_6.png";
+import f_1_1 from "./solutions/task_2/f_1_1.png";
+import f_2_1 from "./solutions/task_2/f_2_1.png";
+import f_3_1 from "./solutions/task_2/f_3_1.png";
+import f_4_1 from "./solutions/task_2/f_4_1.png";
 
 export const GEOMETRY_TASKS = [
   {
@@ -26,17 +30,17 @@ export const GEOMETRY_TASKS = [
       "перпендикулярные прямые",
     ],
   },
-  // {
-  //   _id: 2,
-  //   collection: "algebra",
-  //   theme: "квадратные уравнения",
-  //   title:
-  //     "<p>Подставим все известные значения в формулу:&nbsp;</p><p>$$f=f_0\\cdot \\frac{c+u}{c-v}\\\\ 180=170\\cdot \\frac{c+12}{c-6}\\\\ c=312$$</p>",
-  //   skill: "super-hard",
-  //   solution:
-  //     "Дано квадратное уравнение: $$ax^2 + bx + c = 0$$ Для решения уравнения используется дискриминант:$$D = b^2 - 4ac$$ Подставим значения коэффициентов $a = 1$, $b = -3$, $c = 2$:$$D = (-3)^2 - 4 \\cdot 1 \\cdot 2 = 1$$ Так как $D > 0$, уравнение имеет два корня, которые находятся по формуле: $$x_{1,2} = \\frac{-b \\pm \\sqrt{D}}{2a}$$ Найдём корни уравнения: $$x_1 = \\frac{-(-3) + \\sqrt{1}}{2 \\cdot 1} = 2$$ $$x_2 = \\frac{-(-3) - \\sqrt{1}}{2 \\cdot 1} = 1$$ **Ответ**: $x_1 = 2$, $x_2 = 1$.",
-  //   tags: ["квадратные уравнения"],
-  // },
+  {
+    _id: 2,
+    collection: "algebra",
+    theme: "квадратные уравнения",
+    title:
+      "Подставим все известные значения в формулу:$$f=f_0\\cdot \\frac{c+u}{c-v}\\\\ 180=170\\cdot \\frac{c+12}{c-6}\\\\ c=312$$",
+    skill: "super-hard",
+    solution:
+      "Дано квадратное уравнение: $$ax^2 + bx + c = 0$$ Для решения уравнения используется дискриминант:$$D = b^2 - 4ac$$ Подставим значения коэффициентов $a = 1$, $b = -3$, $c = 2$:$$D = (-3)^2 - 4 \\cdot 1 \\cdot 2 = 1$$ Так как $D > 0$, уравнение имеет два корня, которые находятся по формуле: $$x_{1,2} = \\frac{-b \\pm \\sqrt{D}}{2a}$$ Найдём корни уравнения: $$x_1 = \\frac{-(-3) + \\sqrt{1}}{2 \\cdot 1} = 2$$ $$x_2 = \\frac{-(-3) - \\sqrt{1}}{2 \\cdot 1} = 1$$ **Ответ**: $x_1 = 2$, $x_2 = 1$.",
+    tags: ["квадратные уравнения"],
+  },
   {
     _id: 3,
     collection: "geoma_test",
@@ -157,6 +161,41 @@ export const GEOMETRY_TASKS = [
         },
       ],
       img: solution_img,
+    },
+    tags: [
+      "параллелограмм",
+      "трапеция",
+      "прямоугольный треугольник",
+      "параллельные прямые",
+      "перпендикулярные прямые",
+    ],
+  },
+  {
+    _id: 4,
+    collection: "geoma_test_2",
+    theme: "уравнение",
+    title: "Найти значение выражения:",
+    skill: "super-hard",
+    solution: {
+      sourse: {
+        data: "Найти значение выражения:",
+        img: f_1_1,
+      },
+      data: [
+        {
+          text: "Для того, чтобы найти значение данного выражения, необходимо для начала преобразовать подкоренное выражение в знаменателе дроби по формуле разности квадратов (формулы сокращенного умножения - смотри в теории):",
+          img: f_2_1,
+        },
+        {
+          text: "Далее считаем значение каждой скобки в знаменателе:",
+          img: f_3_1,
+        },
+        {
+          text: "Теперь, пользуясь свойствами корня (квадратный корень - смотри в теории), объединяем два корня под один, вычисляем значение подкоренного выражения путём сокращения дроби и вычисляем значение полученного корня:",
+          img: f_4_1,
+        },
+      ],
+      img: f_1_1,
     },
     tags: [
       "параллелограмм",
@@ -380,11 +419,11 @@ export const GEOMETRY_TASKS = [
   //   ),
   //   skill: "middle",
   // },
-  // {
-  //   _id: 5,
-  //   title: `$$\text {текст для примера}:\sin{\alpha}^2+\cos{\alpha}^2=1.$$`,
-  //   skill: "hard",
-  // },
+  {
+    _id: 5,
+    title: `$$\text {текст для примера}:\sin{\alpha}^2+\cos{\alpha}^2=1.$$`,
+    skill: "hard",
+  },
   // {
   //   _id: 6,
   //   title: "middle 5 карточка",

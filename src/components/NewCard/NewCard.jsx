@@ -124,6 +124,12 @@ function NewCard(props) {
           <button type="button" className={styles.newcard__btn}>
             теория
           </button>
+          {/* <math
+            styles={{ with: "100px", heigth: "100px", border: "1px solid red" }}
+          > */}
+          <formula notation="Tex">E=mc^2</formula>
+          <img src="http://latex.numberempire.com/render?{x}_{1,2}=\frac{-b\pm\sqrt{b^2-4ac}}{2a}" />
+          {/* </math> */}
         </div>
       </li>
       {isShowSolution && <BlockSolution task={task} />}
