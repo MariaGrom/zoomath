@@ -8,16 +8,12 @@ import { useNavigate } from "react-router-dom";
 function NewCard(props) {
   const { task, isExampleCard } = props;
   const navigate = useNavigate();
-  // переменная состояния для демонстрации решения
-  const [isShowSolution, setIsShowSolution] = useState(false);
-  // переменная состояния для отметки сохранения задачи
-  const [isSaveTask, setIsSaveTask] = useState(false);
-  // переменная состояния для отметки выполненной задачи
-  const [isDoneTask, setIsDoneTask] = useState(false);
-  // переменная состояния для отметки лайка
-  const [isLikeTask, setIsLikeTask] = useState(false);
-  // переменная состояния количества лайков
-  const [countLike, setCountLike] = useState(124);
+
+  const [isShowSolution, setIsShowSolution] = useState(false); // переменная состояния для демонстрации решения
+  const [isSaveTask, setIsSaveTask] = useState(false); // переменная состояния для отметки сохранения задачи
+  const [isDoneTask, setIsDoneTask] = useState(false); // переменная состояния для отметки выполненной задачи
+  const [isLikeTask, setIsLikeTask] = useState(false); // переменная состояния для отметки лайка
+  const [countLike, setCountLike] = useState(124); // переменная состояния количества лайков
 
   // функция открытия попапа
   const handleOpen = () => {
@@ -45,6 +41,7 @@ function NewCard(props) {
       setIsDoneTask(true);
     }
   };
+
   // функция лайкнутой задачи
   const handleLikeTask = () => {
     if (isLikeTask === true) {
@@ -82,7 +79,16 @@ function NewCard(props) {
           <p>{task.skill}</p>
         </div>
         <div className={styles.newcard__task}>
-          <p>{task.title}</p>
+          <div className={styles.newcard__condition}>
+            <p>{task.title}</p>
+            {task.condition_img ? (
+              <img
+                src={task.condition_img}
+                className={styles.newcard__conditionImg}
+                alt="условие"
+              />
+            ) : null}
+          </div>
           <div className={styles.newcard__statistics}>
             <div className={styles.newcard__statisticsLike}>
               <button
@@ -124,12 +130,6 @@ function NewCard(props) {
           <button type="button" className={styles.newcard__btn}>
             теория
           </button>
-          {/* <math
-            styles={{ with: "100px", heigth: "100px", border: "1px solid red" }}
-          > */}
-          <formula notation="Tex">E=mc^2</formula>
-          <img src="http://latex.numberempire.com/render?{x}_{1,2}=\frac{-b\pm\sqrt{b^2-4ac}}{2a}" />
-          {/* </math> */}
         </div>
       </li>
       {isShowSolution && <BlockSolution task={task} />}

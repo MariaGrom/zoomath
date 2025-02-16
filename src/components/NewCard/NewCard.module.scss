@@ -107,7 +107,6 @@
 
     p {
       text-align: left;
-      width: 80%;
       font-size: 24px;
     }
   }
@@ -174,5 +173,15 @@
 
   &__btn:hover {
     background-color: $violet;
+  }
+
+  &__condition {
+    display: flex;
+    align-items: center;
+  }
+
+  &__conditionImg {
+    max-width: 120px;
+    height: fit-content;
   }
 }
