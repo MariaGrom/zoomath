@@ -1,9 +1,10 @@
 {
   "files": {
-    "main.css": "/zoomath/static/css/main.6d271b29.css",
-    "main.js": "/zoomath/static/js/main.e4c4d465.js",
+    "main.css": "/zoomath/static/css/main.e3e3a45b.css",
+    "main.js": "/zoomath/static/js/main.ec633cad.js",
     "static/media/8-G2_1.jpg": "/zoomath/static/media/8-G2_1.07419f2df0b219d8de00.jpg",
     "static/media/solution_image.png": "/zoomath/static/media/solution_image.01250c74a5151ac66fba.png",
+    "static/media/sourse_img.png": "/zoomath/static/media/sourse_img.144d1e15bf0290f87079.png",
     "static/media/textsolution.jpg": "/zoomath/static/media/textsolution.e6ff9f70ef8c3c68a0db.jpg",
     "static/media/KaTeX_AMS-Regular.ttf": "/zoomath/static/media/KaTeX_AMS-Regular.853be92419a6c3766b9a.ttf",
     "static/media/KaTeX_Main-Regular.ttf": "/zoomath/static/media/KaTeX_Main-Regular.9eba1d77abcf2aa6e94e.ttf",
@@ -20,6 +21,7 @@
     "static/media/KaTeX_Main-Regular.woff2": "/zoomath/static/media/KaTeX_Main-Regular.f650f111a3b890d116f1.woff2",
     "static/media/KaTeX_Main-Bold.woff2": "/zoomath/static/media/KaTeX_Main-Bold.39890742bc957b368704.woff2",
     "static/media/KaTeX_SansSerif-Bold.ttf": "/zoomath/static/media/KaTeX_SansSerif-Bold.5b49f4993ae22d7975b4.ttf",
+    "static/media/f_1_1.png": "/zoomath/static/media/f_1_1.bf1c718b3430a0d65429.png",
     "static/media/KaTeX_SansSerif-Italic.ttf": "/zoomath/static/media/KaTeX_SansSerif-Italic.b257a18c016f37ee4543.ttf",
     "static/media/KaTeX_Main-Italic.woff": "/zoomath/static/media/KaTeX_Main-Italic.fd947498bc16392e76c2.woff",
     "static/media/KaTeX_Fraktur-Bold.ttf": "/zoomath/static/media/KaTeX_Fraktur-Bold.4c761b3711973ab04edf.ttf",
@@ -86,11 +88,11 @@
     "static/media/slider_right.svg": "/zoomath/static/media/slider_right.b48914911233853b5645ebbec0a77670.svg",
     "static/media/bookmark_not.svg": "/zoomath/static/media/bookmark_not.d57ca95779ed250fdb0c.svg",
     "static/media/bookmark.svg": "/zoomath/static/media/bookmark.6ba274c1ad6c2dc639f8.svg",
-    "main.6d271b29.css.map": "/zoomath/static/css/main.6d271b29.css.map",
-    "main.e4c4d465.js.map": "/zoomath/static/js/main.e4c4d465.js.map"
+    "main.e3e3a45b.css.map": "/zoomath/static/css/main.e3e3a45b.css.map",
+    "main.ec633cad.js.map": "/zoomath/static/js/main.ec633cad.js.map"
   },
   "entrypoints": [
-    "static/css/main.6d271b29.css",
-    "static/js/main.e4c4d465.js"
+    "static/css/main.e3e3a45b.css",
+    "static/js/main.ec633cad.js"
   ]
 }
