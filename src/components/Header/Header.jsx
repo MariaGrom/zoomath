@@ -7,7 +7,7 @@ function Header() {
   return (
     <section className={styles.header}>
       <div className={styles.container}>
-        <div className={styles.logo}>LOGO</div>
+        <Link to="/zoomath">LOGO</Link>
         <nav>
           <ul className={styles.list}>
             <li>
@@ -19,6 +19,10 @@ function Header() {
             <li>
               <a href="#">Отзывы</a>
             </li>
+            <li>
+              <Link to="/filter">Пройти вступительный тест</Link>
+            </li>
+
             <li>
               <Link to="/createcard">Создать карточку</Link>
             </li>
