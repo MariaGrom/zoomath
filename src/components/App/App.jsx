@@ -13,6 +13,7 @@ import Login from "../Login/Login";
 import AboutProject from "../AboutProject/AboutProject";
 import FilterPage from "../../pages/FilterPage/FilterPage";
 import TestPage from "../../pages/TestPage/TestPage";
+import { CreateCardPage } from "../../pages/CreateCardPage/CreateCardPage";
 
 function App() {
   return (
@@ -32,6 +33,7 @@ function App() {
         <Route path="signin" element={<Login />} />
         <Route path="/filter" element={<FilterPage />} />
         <Route path="/testpage" element={<TestPage />} />
+        <Route path="/createcard" element={<CreateCardPage />} />
       </Routes>
     </div>
   );
