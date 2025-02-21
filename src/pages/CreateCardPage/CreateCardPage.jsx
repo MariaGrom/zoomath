@@ -2,24 +2,17 @@ import { useState } from "react";
 import "./CreateCardPage.scss";
 import { DropdownCustom } from "../../components/Dropdown/DropdownCustom";
 import { PrimaryButton } from "../../components/PrimaryButton/PrimaryButton";
-
-const SELECTABLE_CLASSES = [
-  "5 класс",
-  "6 класс",
-  "7 класс",
-  "8 класс",
-  "9 класс",
-  "10 класс",
-  "11 класс",
-];
-
-const SELECTABLE_DIFFICULTY = ["easy", "middle", "hard", "super-hard"];
-
-const SELECTABLE_SUBJECTS = ["алгерба", "геометрия"];
+import { CreateBlock } from "../../components/ CreateBlock/CreateBlock";
+import {
+  SELECTABLE_CLASSES,
+  SELECTABLE_DIFFICULTY,
+  SELECTABLE_SUBJECTS,
+} from "../../vendor/constants";
 
 export const CreateCardPage = (props) => {
   const [text, setText] = useState("");
   const [tags, setTags] = useState([]);
+  const [numberOfBlocks, setNumberOfBlocks] = useState(0);
 
   function handleChangeText(e) {
     setText(e.target.value);
@@ -29,11 +22,16 @@ export const CreateCardPage = (props) => {
     setTags(e.target.value);
   }
 
+  function handleAddBlockClick() {
+    console.log("добавить блок");
+    setNumberOfBlocks(numberOfBlocks + 1);
+  }
+
   return (
     <div className="form">
       cтраница формы
       <fieldset className="form__fields">
-        <label className="form__field">
+        {/* <label className="form__field">
           <p className="form__text">текст задачи</p>
           <input
             id="input__text"
@@ -44,9 +42,6 @@ export const CreateCardPage = (props) => {
             value={text}
             onChange={handleChangeText}
           />
-          {/* <span className="input__error input__error-email">
-                {emailError}
-              </span> */}
         </label>
         <label className="form__field">
           <p className="form__text">
@@ -58,27 +53,25 @@ export const CreateCardPage = (props) => {
             type="file"
             name="image"
             accept={".png, .jpg, .jpeg"}
-            // value={password}
-            // onChange={handleChangePassword}
-            // required
-          />
-          {/* <span className="input__error input__error-password">
-            {passwordError}
-          </span> */}
+            value={password}
+            onChange={handleChangePassword}
+            required
+          /> */}
 
-          <div onClick={console.log("добавить")}>Добавить еще одну секцию</div>
-        </label>
+        <CreateBlock />
+        {numberOfBlocks > 0 && <CreateBlock />}
+        {/* </label> */}
         {/* {children} */}
         <label className="form__field">
           <p className="form__text">выберите класс</p>
           <DropdownCustom options={SELECTABLE_CLASSES} />
         </label>
         <label className="form__field">
-          <p className="form__text">выберите уровень предмет</p>
+          <p className="form__text">выберите уровень сложности</p>
           <DropdownCustom options={SELECTABLE_DIFFICULTY} />
         </label>
         <label className="form__field">
-          <p className="form__text">выберите уровень сложности</p>
+          <p className="form__text">выберите предмет</p>
           <DropdownCustom options={SELECTABLE_SUBJECTS} />
         </label>
 
