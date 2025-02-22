@@ -2,19 +2,14 @@ import React, { useState } from "react";
 import "./CardAlgebra.css";
 import NewCard from "../NewCard/NewCard";
 import { GEOMETRY_TASKS } from "../../mock/geometry/geometry_tasks";
-import MathJaxRenderer from "../MathJaxRenderer/MathJaxRenderer";
-
-import ReactMarkdown from "react-markdown";
-import remarkMath from "remark-math";
-import rehypeKatex from "rehype-katex";
-import "katex/dist/katex.min.css";
+import { ALGEBRA_TASKS } from "../../mock/algebra/algebra_tasks";
 
 function CardAlgebra() {
   // тестовый вариант зареганового пользователя
   const [loggedIn, setLoggedIn] = useState(true);
 
   // захардкоженные карточки, больше не нужны
-  const [tasks, setTasks] = useState(GEOMETRY_TASKS);
+  const [tasks, setTasks] = useState(ALGEBRA_TASKS);
 
   // const [tasks, setTasks] = useState([]);
 

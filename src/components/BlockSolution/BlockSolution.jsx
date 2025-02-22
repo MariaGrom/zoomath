@@ -10,36 +10,50 @@ export const BlockSolution = (props) => {
   return (
     <div className={styles.wrapper_card_solution}>
       <div>
-        <div className={styles.sourse}>
-          <img
-            src={solution?.sourse?.img}
-            alt="исходный рисунок"
-            style={{ maxWidth: "200px" }}
-          />
-          <div>
-            <p>Дано</p>
-            <div>{solution?.sourse?.data}</div>
-            <p>Найти</p>
+        {solution?.sourse?.img ? (
+          <div className={styles.sourse}>
+            <img
+              src={solution?.sourse?.img}
+              alt="исходный рисунок"
+              style={{ maxWidth: "200px" }}
+            />
+            <div>
+              <p>Дано</p>
+              <div>{solution?.sourse?.data}</div>
+              <p>Найти</p>
+            </div>
           </div>
-        </div>
+        ) : null}
         <div className={styles.solution}>
           <div>
             <p>Решение</p>
-            <img
-              src={solution?.img}
-              alt="рисунок решения"
-              style={{ maxWidth: "200px" }}
-            />
+            {solution?.img ? (
+              <img
+                src={solution?.img}
+                alt="рисунок решения"
+                style={{ maxWidth: "300px" }}
+              />
+            ) : null}
           </div>
           <div style={{ border: "1px solid blue", maxWidth: "738px" }}>
             {solution?.data.map((item) => {
               return (
                 <div>
-                  <div>{item?.text}</div>
-                  <img src={item?.img} alt="" style={{ width: "200px" }} />
+                  <div style={{ textAlign: "start" }}>{item?.text}</div>
+                  <img src={item?.img} alt="" style={{ width: "300px" }} />
                 </div>
               );
             })}
+            <div style={{ display: "flex", alignItems: "center" }}>
+              Ответ:
+              {solution?.answer_img ? (
+                <img
+                  src={solution?.answer_img}
+                  alt="ответ"
+                  style={{ width: "100px" }}
+                />
+              ) : null}
+            </div>
           </div>
         </div>
       </div>
