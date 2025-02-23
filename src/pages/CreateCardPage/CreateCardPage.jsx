@@ -10,56 +10,28 @@ import {
 } from "../../vendor/constants";
 
 export const CreateCardPage = (props) => {
-  const [text, setText] = useState("");
   const [tags, setTags] = useState([]);
-  const [numberOfBlocks, setNumberOfBlocks] = useState(0);
-
-  function handleChangeText(e) {
-    setText(e.target.value);
-  }
+  const [numberOfBlocks, setNumberOfBlocks] = useState([]);
 
   function handleChangeTags(e) {
     setTags(e.target.value);
   }
 
   function handleAddBlockClick() {
-    console.log("добавить блок");
-    setNumberOfBlocks(numberOfBlocks + 1);
+    setNumberOfBlocks([
+      ...numberOfBlocks,
+      <CreateBlock key={numberOfBlocks.length} />,
+    ]);
   }
 
   return (
-    <div className="form">
+    <div
+      style={{ display: "flex", flexDirection: "column", alignItems: "center" }}
+    >
       cтраница формы
-      <fieldset className="form__fields">
-        {/* <label className="form__field">
-          <p className="form__text">текст задачи</p>
-          <input
-            id="input__text"
-            className="form__input"
-            type="text"
-            name="text"
-            required
-            value={text}
-            onChange={handleChangeText}
-          />
-        </label>
-        <label className="form__field">
-          <p className="form__text">
-            Загрузите фото формулы или изображение для задачки
-          </p>
-          <input
-            id="input__img"
-            className="form__input"
-            type="file"
-            name="image"
-            accept={".png, .jpg, .jpeg"}
-            value={password}
-            onChange={handleChangePassword}
-            required
-          /> */}
-
-        <CreateBlock />
-        {numberOfBlocks > 0 && <CreateBlock />}
+      <div className="form__fields">
+        {numberOfBlocks.map((item) => item)}
+        <button onClick={handleAddBlockClick}>Создать блок</button>
         {/* </label> */}
         {/* {children} */}
         <label className="form__field">
@@ -90,7 +62,7 @@ export const CreateCardPage = (props) => {
                 {emailError}
               </span> */}
         </label>
-      </fieldset>
+      </div>
       <PrimaryButton
         onClick={console.log("отправляем собранные данные на сервер")}
       >

@@ -40,7 +40,11 @@ export const BlockSolution = (props) => {
               return (
                 <div>
                   <div style={{ textAlign: "start" }}>{item?.text}</div>
-                  <img src={item?.img} alt="" style={{ width: "300px" }} />
+                  <img
+                    src={item?.img}
+                    alt=""
+                    style={{ maxwidth: "300px", maxHeight: "24px" }}
+                  />
                 </div>
               );
             })}

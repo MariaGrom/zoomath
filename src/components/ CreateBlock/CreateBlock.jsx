@@ -2,19 +2,13 @@ import { useState } from "react";
 
 export const CreateBlock = (props) => {
   const [text, setText] = useState("");
-  const [numberOfBlocks, setNumberOfBlocks] = useState(0);
 
   function handleChangeText(e) {
     setText(e.target.value);
   }
 
-  function handleAddBlockClick() {
-    console.log("добавить блок");
-    setNumberOfBlocks(numberOfBlocks + 1);
-  }
-
   return (
-    <div>
+    <div style={{ border: "1px solid red" }}>
       <label className="form__field">
         <p className="form__text">текст задачи</p>
         <input
@@ -48,7 +42,6 @@ export const CreateBlock = (props) => {
             {passwordError}
           </span> */}
       </label>
-      <button onClick={handleAddBlockClick}>Add New Block</button>
     </div>
   );
 };
