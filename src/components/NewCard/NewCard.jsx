@@ -59,6 +59,8 @@ function NewCard(props) {
     navigate("/algebra/base/card");
   };
 
+  console.log("task", task);
+
   return (
     <>
       <li className={styles.newcard} id={task._id}>
@@ -79,15 +81,24 @@ function NewCard(props) {
           <p>{task.skill}</p>
         </div>
         <div className={styles.newcard__task}>
-          <div className={styles.newcard__condition}>
-            <p>{task.title}</p>
-            {task.condition_img ? (
-              <img
-                src={task.condition_img}
-                className={styles.newcard__conditionImg}
-                alt="условие"
-              />
-            ) : null}
+          <div>
+            {task?.blocks?.map((block) => (
+              <div className={styles.newcard__condition}>
+                <p>
+                  {block.title}
+
+                  {/* </p> */}
+                  {block.file ? (
+                    <img
+                      // src={block.file}
+                      src={`http://localhost:3003${block.file}`}
+                      className={styles.newcard__conditionImg}
+                      // alt="условие"
+                    />
+                  ) : null}
+                </p>
+              </div>
+            ))}
           </div>
           <div className={styles.newcard__statistics}>
             <div className={styles.newcard__statisticsLike}>
