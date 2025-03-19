@@ -71,7 +71,7 @@ export const CreateBlock = ({
       </label>
       <label className="form__field">
         <p className="form__text">
-          Загрузите фото формулы или изображение для задачки
+          Загрузите фото формулы или изображение для задачки 99
         </p>
         <input
           id="input__img"
