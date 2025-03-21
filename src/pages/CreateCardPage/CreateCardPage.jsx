@@ -20,6 +20,7 @@ export const CreateCardPage = (props) => {
   const [blocks, setBlocks] = useState([]);
   const [otherInput, setOtherInput] = useState("");
   const [serverBlocks, setServerBlocks] = useState({});
+  const API_URL = process.env.SERVER_IP;
 
   const handleAddBlockClick = () => {
     setBlocks([...blocks, { file: null, title: "" }]);
@@ -79,7 +80,7 @@ export const CreateCardPage = (props) => {
     }
 
     try {
-      const response = await fetch("http://localhost:3003/create/condition", {
+      const response = await fetch(`${API_URL}/create/condition`, {
         method: "POST",
         body: formData,
       });
@@ -106,7 +107,7 @@ export const CreateCardPage = (props) => {
   }
 
   const getDataCard = () => {
-    fetch("http://localhost:3003/get/data", {
+    fetch(`${API_URL}/get/data`, {
       headers: {
         "content-type": "application/json",
       },
