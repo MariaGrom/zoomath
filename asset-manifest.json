@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/zoomath/static/css/main.8d6c1538.css",
-    "main.js": "/zoomath/static/js/main.84e2ae61.js",
+    "main.js": "/zoomath/static/js/main.e56493ae.js",
     "static/media/8-G2_1.jpg": "/zoomath/static/media/8-G2_1.07419f2df0b219d8de00.jpg",
     "static/media/solution_image.png": "/zoomath/static/media/solution_image.01250c74a5151ac66fba.png",
     "static/media/sourse_img.png": "/zoomath/static/media/sourse_img.144d1e15bf0290f87079.png",
@@ -33,10 +33,10 @@
     "static/media/bookmark_not.svg": "/zoomath/static/media/bookmark_not.d57ca95779ed250fdb0c.svg",
     "static/media/bookmark.svg": "/zoomath/static/media/bookmark.6ba274c1ad6c2dc639f8.svg",
     "main.8d6c1538.css.map": "/zoomath/static/css/main.8d6c1538.css.map",
-    "main.84e2ae61.js.map": "/zoomath/static/js/main.84e2ae61.js.map"
+    "main.e56493ae.js.map": "/zoomath/static/js/main.e56493ae.js.map"
   },
   "entrypoints": [
     "static/css/main.8d6c1538.css",
-    "static/js/main.84e2ae61.js"
+    "static/js/main.e56493ae.js"
   ]
 }
