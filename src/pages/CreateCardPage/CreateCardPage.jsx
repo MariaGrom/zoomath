@@ -20,7 +20,7 @@ export const CreateCardPage = (props) => {
   const [blocks, setBlocks] = useState([]);
   const [otherInput, setOtherInput] = useState("");
   const [serverBlocks, setServerBlocks] = useState({});
-  const API_URL = process.env.SERVER_IP;
+  const API_URL = process.env.REACT_APP_SERVER_IP;
 
   const handleAddBlockClick = () => {
     setBlocks([...blocks, { file: null, title: "" }]);
