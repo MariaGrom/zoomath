@@ -9,6 +9,7 @@ import {
   SELECTABLE_SUBJECTS,
 } from "../../vendor/constants";
 import NewCard from "../../components/NewCard/NewCard";
+import { loadConfig } from "../../config";
 
 export const CreateCardPage = (props) => {
   const [tags, setTags] = useState([]);
@@ -20,23 +21,22 @@ export const CreateCardPage = (props) => {
   const [blocks, setBlocks] = useState([]);
   const [otherInput, setOtherInput] = useState("");
   const [serverBlocks, setServerBlocks] = useState({});
-  const API_URL = process.env.REACT_APP_SERVER_IP;
+  // const API_URL = process.env.REACT_APP_SERVER_IP;
+
+  // const [apiUrl, setApiUrl] = useState(""); // Сохраняем API URL
+  const apiUrl = "http://192.168.1.16:3003";
+
+  // useEffect(() => {
+  //   const fetchConfig = async () => {
+  //     const url = await loadConfig();
+  //     setApiUrl(url); // Сохраняем API URL в state
+  //   };
+  //   fetchConfig();
+  // }, []);
 
   const handleAddBlockClick = () => {
     setBlocks([...blocks, { file: null, title: "" }]);
-    // setBlocks([...blocks, {}]); // Добавляем новый блок
   };
-
-  // const handleBlockChange = (index, updatedBlock) => {
-  //   const newBlocks = [...blocks];
-  //   // console.log("newBlocks", newBlocks);
-  //   // newBlocks[index] = updatedBlock;
-
-  //   newBlocks.splice(index, 1);
-  //   // console.log("updatedBlock", updatedBlock);
-
-  //   setBlocks(newBlocks);
-  // };
 
   const handleBlockChange = (index, field, value) => {
     const newBlocks = [...blocks];
@@ -56,14 +56,19 @@ export const CreateCardPage = (props) => {
   //   setBlocks(newBlocks);
   // };
 
-  // useEffect(() => {
-  //   console.log("Состояние blocks изменилось:", blocks);
-  // }, [blocks]);
-
   const sendData = async (e) => {
     e.preventDefault();
 
-    console.log("Состояние blocks перед отправкой:", blocks);
+    console.log(
+      "Состояние blocks перед отправкой:",
+      blocks,
+      `${apiUrl}/create/condition`
+    );
+
+    if (!apiUrl) {
+      console.error("API URL не загружен");
+      return;
+    }
 
     const formData = new FormData();
 
@@ -80,7 +85,7 @@ export const CreateCardPage = (props) => {
     }
 
     try {
-      const response = await fetch(`${API_URL}/create/condition`, {
+      const response = await fetch(`${apiUrl}/create/condition`, {
         method: "POST",
         body: formData,
       });
@@ -95,19 +100,12 @@ export const CreateCardPage = (props) => {
     setTags(e.target.value);
   }
 
-  // function handleAddBlockClick() {
-  //   setNumberOfBlocks([
-  //     ...numberOfBlocks,
-  //     <CreateBlock key={numberOfBlocks.length} />,
-  //   ]);
-  // }
-
   function handleChangetsubject(e) {
     setSubject(e.target.value);
   }
 
   const getDataCard = () => {
-    fetch(`${API_URL}/get/data`, {
+    fetch(`${apiUrl}/get/data`, {
       headers: {
         "content-type": "application/json",
       },
@@ -165,7 +163,9 @@ export const CreateCardPage = (props) => {
         </div>
       ))}
       <button onClick={handleAddBlockClick}>Добавить блок</button>
-      <button onClick={sendData}>Отправить</button>
+      <button onClick={sendData} disabled={!apiUrl}>
+        Отправить
+      </button>
       <button onClick={getDataCard}>получить данные</button>
       {/* {serverBlocks.map((block) => ( */}
       <NewCard key={serverBlocks._id} task={serverBlocks} />

@@ -59,7 +59,7 @@ function NewCard(props) {
     navigate("/algebra/base/card");
   };
 
-  console.log("task", task);
+  // console.log("task", task);
 
   return (
     <>
