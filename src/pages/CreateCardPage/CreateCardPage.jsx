@@ -24,7 +24,7 @@ export const CreateCardPage = (props) => {
   // const API_URL = process.env.REACT_APP_SERVER_IP;
 
   // const [apiUrl, setApiUrl] = useState(""); // Сохраняем API URL
-  const apiUrl = "http://192.168.1.16:3003";
+  const apiUrl = "api_example";
 
   // useEffect(() => {
   //   const fetchConfig = async () => {
