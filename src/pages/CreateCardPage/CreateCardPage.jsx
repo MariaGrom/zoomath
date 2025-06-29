@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import "./CreateCardPage.scss";
 import { DropdownCustom } from "../../components/Dropdown/DropdownCustom";
 import { PrimaryButton } from "../../components/PrimaryButton/PrimaryButton";
-import { CreateBlock } from "../../components/ CreateBlock/CreateBlock";
+import { CreateBlock } from "../../components/CreateBlock/CreateBlock";
 import {
   SELECTABLE_CLASSES,
   SELECTABLE_DIFFICULTY,
@@ -13,26 +13,22 @@ import { loadConfig } from "../../config";
 
 export const CreateCardPage = (props) => {
   const [tags, setTags] = useState([]);
-  const [numberOfBlocks, setNumberOfBlocks] = useState([]);
   const [subject, setSubject] = useState("");
   const [file, setFile] = useState();
   const [title, setTitle] = useState();
 
   const [blocks, setBlocks] = useState([]);
-  const [otherInput, setOtherInput] = useState("");
+  const [topicInput, setTopicInput] = useState("");
+  const [tagInput, setTagInput] = useState("");
+  const [subjectInput, setSubjectInput] = useState("");
+  const [skillInput, setSkillInput] = useState("");
+  const [classInput, setClassInput] = useState("");
   const [serverBlocks, setServerBlocks] = useState({});
+  const [styleInput, setStyleInput] = useState("");
   // const API_URL = process.env.REACT_APP_SERVER_IP;
 
   // const [apiUrl, setApiUrl] = useState(""); // Сохраняем API URL
-  const apiUrl = "api_example";
-
-  // useEffect(() => {
-  //   const fetchConfig = async () => {
-  //     const url = await loadConfig();
-  //     setApiUrl(url); // Сохраняем API URL в state
-  //   };
-  //   fetchConfig();
-  // }, []);
+  const apiUrl = "http://localhost:3003";
 
   const handleAddBlockClick = () => {
     setBlocks([...blocks, { file: null, title: "" }]);
@@ -43,18 +39,6 @@ export const CreateCardPage = (props) => {
     newBlocks[index][field] = value;
     setBlocks(newBlocks);
   };
-
-  // const handleImageChange = (index, image) => {
-  //   const newBlocks = [...blocks];
-  //   newBlocks[index].image = image;
-  //   setBlocks(newBlocks);
-  // };
-
-  // const handleTextChange = (index, text) => {
-  //   const newBlocks = [...blocks];
-  //   newBlocks[index].text = text;
-  //   setBlocks(newBlocks);
-  // };
 
   const sendData = async (e) => {
     e.preventDefault();
@@ -75,9 +59,14 @@ export const CreateCardPage = (props) => {
     blocks.forEach((block, index) => {
       formData.append(`blocks[${index}][file]`, block.file);
       formData.append(`blocks[${index}][title]`, block.title);
+      formData.append(`blocks[${index}][style]`, block.style);
     });
 
-    formData.append("otherInput", otherInput);
+    formData.append("topicInput", topicInput);
+    formData.append("subjectInput", subjectInput);
+    formData.append("skillInput", skillInput);
+    formData.append("tagInput", tagInput);
+    formData.append("classInput", classInput);
 
     console.log("Отправленные данные:");
     for (let pair of formData.entries()) {
@@ -137,9 +126,33 @@ export const CreateCardPage = (props) => {
       {/* Поле для других данных */}
       <input
         type="text"
-        placeholder="Введите данные"
-        value={otherInput}
-        onChange={(e) => setOtherInput(e.target.value)}
+        placeholder="тема"
+        value={topicInput}
+        onChange={(e) => setTopicInput(e.target.value)}
+      />
+      <input
+        type="text"
+        placeholder="предмет"
+        value={subjectInput}
+        onChange={(e) => setSubjectInput(e.target.value)}
+      />
+      <input
+        type="text"
+        placeholder="сложность задачи"
+        value={skillInput}
+        onChange={(e) => setSkillInput(e.target.value)}
+      />
+      <input
+        type="text"
+        placeholder="тег"
+        value={tagInput}
+        onChange={(e) => setTagInput(e.target.value)}
+      />
+      <input
+        type="text"
+        placeholder="класс"
+        value={classInput}
+        onChange={(e) => setClassInput(e.target.value)}
       />
       {/* Динамические блоки */}
       {blocks.map((block, index) => (
@@ -159,6 +172,12 @@ export const CreateCardPage = (props) => {
             onChange={(e) =>
               handleBlockChange(index, "file", e.target.files[0])
             }
+          />
+          <input
+            type="text"
+            placeholder="стиль формулы"
+            value={block.style}
+            onChange={(e) => handleBlockChange(index, "style", e.target.value)}
           />
         </div>
       ))}

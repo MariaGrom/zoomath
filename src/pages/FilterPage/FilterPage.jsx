@@ -5,7 +5,7 @@ import { DropdownCustom } from "../../components/Dropdown/DropdownCustom";
 import {
   SELECTABLE_CLASSES,
   SELECTABLE_LYCEUMS,
-  SELECTABLE_DIFFICULTY,
+  SELECTABLE_SKILL,
   SELECTABLE_SUBJECTS,
   SELECTABLE_TOPIC_ALGEBRA,
   SELECTABLE_TOPIC_GEOMA,
@@ -48,7 +48,7 @@ function FilterPage() {
           </label>
           <label className="form__field">
             <p className="form__text">выбери уровень сложности</p>
-            <DropdownCustom options={SELECTABLE_DIFFICULTY} />
+            <DropdownCustom options={SELECTABLE_SKILL} />
           </label>
         </div>
         <div>
@@ -69,7 +69,7 @@ function FilterPage() {
           </label>
           <label className="form__field">
             <p className="form__text">выбери уровень сложности</p>
-            <DropdownCustom options={SELECTABLE_DIFFICULTY} />
+            <DropdownCustom options={SELECTABLE_SKILL} />
           </label>
         </div>
       </div>

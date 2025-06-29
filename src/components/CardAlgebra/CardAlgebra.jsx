@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./CardAlgebra.css";
 import NewCard from "../NewCard/NewCard";
 import { GEOMETRY_TASKS } from "../../mock/geometry/geometry_tasks";
@@ -9,45 +9,46 @@ function CardAlgebra() {
   const [loggedIn, setLoggedIn] = useState(true);
 
   // захардкоженные карточки, больше не нужны
-  const [tasks, setTasks] = useState(ALGEBRA_TASKS);
+  // const [tasks, setTasks] = useState(ALGEBRA_TASKS);
 
-  // const [tasks, setTasks] = useState([]);
+  const [tasks, setTasks] = useState([]);
 
   // пробный запрос данных с локального сервера через fetch
-  // useEffect(() => {
-  //   fetch("http://localhost:3003/algebra/base/card", {
-  //     headers: {
-  //       "content-type": "application/json",
-  //     },
-  //   })
-  //     .then((res) => {
-  //       if (res.ok) {
-  //         return res.json();
-  //       } else {
-  //         console.log("err");
-  //       }
-  //     })
-  //     .then((tasks) => {
-  //       console.log("data", tasks);
-  //       console.log('data.data', tasks.data)
-  //       const serverTasks = tasks.data
-  //       setTasks(serverTasks);
-  //       setFilteredTasks(serverTasks)
-  //     })
-  //     .catch((error) => {
-  //       console.log(error);
-  //     });
-  // }, []);
+  useEffect(() => {
+    fetch("http://localhost:3003/algebra/base/card", {
+      headers: {
+        "content-type": "application/json",
+      },
+    })
+      .then((res) => {
+        if (res.ok) {
+          return res.json();
+        } else {
+          console.log("err");
+        }
+      })
+      .then((tasks) => {
+        // console.log("data", tasks);
+        // console.log("data.data", tasks.data);
+        const serverTasks = tasks.data;
+        setTasks(serverTasks);
+        setFilteredTasks(serverTasks);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  }, []);
 
   // console.log("tasks", tasks);
 
   const [filteredTasks, setFilteredTasks] = useState(tasks);
 
   function taskFilter(skill) {
+    console.log("click", tasks);
     if (skill === "all") {
       setFilteredTasks(tasks);
     } else {
-      let newTasks = [...tasks].filter((item) => item.skill === skill);
+      let newTasks = [...tasks].filter((item) => item?.skillInput === skill);
       setFilteredTasks(newTasks);
     }
   }

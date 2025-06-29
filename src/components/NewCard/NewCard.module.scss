@@ -12,8 +12,10 @@
   flex-direction: column;
   justify-content: space-between;
   box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.25);
+
   p {
-    font-family: "Cormorant Infant", serif;
+    // font-family: "Cormorant Infant", serif;
+    font-family: "Times NR Cyr MT";
     font-weight: 200;
     font-style: normal;
   }
@@ -87,7 +89,7 @@
     background-image: url("../../img/like_not.svg");
   }
 
-  &__complexity {
+  &__skill {
     width: 120px;
     height: 40px;
     background-color: $orange;
@@ -113,6 +115,7 @@
     p {
       text-align: left;
       font-size: 24px;
+      display: contents;
     }
   }
 
@@ -174,6 +177,8 @@
     font-size: 24px;
     cursor: pointer;
     transition: background-color 0.4s linear;
+    font-family: "Times NR Cyr MT";
+    z-index: 2;
   }
 
   &__btn:hover {
@@ -183,10 +188,42 @@
   &__condition {
     display: flex;
     align-items: center;
+    font-family: "Times NR Cyr MT";
+    // border: 1px solid red;
   }
 
   &__conditionImg {
-    max-width: 200px;
-    height: fit-content;
+    height: auto;
+    width: auto;
+    max-height: 45px;
+    &_small {
+      max-height: 35px;
+    }
+    &_large {
+      max-height: 55px;
+    }
+  }
+
+  &__edit {
+    position: absolute;
+    bottom: 10px;
+    right: 30px;
+  }
+
+  &__skillImg {
+    width: 250px;
+    border-style: none;
+    position: absolute;
+    top: 0;
+    right: 100px;
+  }
+
+  &__img_wrapper {
+    position: absolute;
+    right: 76px;
+    top: -43px;
+    z-index: 1;
+
+    border: 1px solid green;
   }
 }

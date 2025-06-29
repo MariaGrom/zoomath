@@ -34,6 +34,7 @@ function App() {
         <Route path="/filter" element={<FilterPage />} />
         <Route path="/testpage" element={<TestPage />} />
         <Route path="/createcard" element={<CreateCardPage />} />
+        {/* <Route path="/edit/:id" element={<EditCardPage />} /> */}
       </Routes>
     </div>
   );

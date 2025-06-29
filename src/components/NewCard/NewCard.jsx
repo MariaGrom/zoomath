@@ -1,9 +1,13 @@
-import { useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import styles from "./NewCard.module.scss";
 import IconStat from "../../img/stat.svg";
+import IconEdit from "../../img/icon_edit.svg";
 // import { Popup } from "../Popup/Popup";
 import { BlockSolution } from "../BlockSolution/BlockSolution";
 import { useNavigate } from "react-router-dom";
+import IconCubeEasy from "../../img/cube-easy";
+import IconCubeMiddle from "../../img/cube-middle";
+import IconCubeHard from "../../img/cube-hard.svg";
 
 function NewCard(props) {
   const { task, isExampleCard } = props;
@@ -46,7 +50,7 @@ function NewCard(props) {
   const handleLikeTask = () => {
     if (isLikeTask === true) {
       setIsLikeTask(false);
-      console.log("click");
+      // console.log("click");
       // не сразу отрисовывает - разобраться почему
       setCountLike(countLike + 1);
     } else {
@@ -59,7 +63,11 @@ function NewCard(props) {
     navigate("/algebra/base/card");
   };
 
-  // console.log("task", task);
+  const goToEditPage = (cardId) => {
+    console.log("click");
+    navigate(`/edit/${cardId}`, "_blank");
+  };
+  console.log("task", task);
 
   return (
     <>
@@ -77,26 +85,31 @@ function NewCard(props) {
           className={isDoneTask ? styles.newcard__done : styles.newcard__doNot}
         ></button>
 
-        <div className={styles.newcard__complexity}>
-          <p>{task.skill}</p>
+        <div className={styles.newcard__skill}>
+          <p>{task.skillInput}</p>
         </div>
         <div className={styles.newcard__task}>
           <div>
             {task?.blocks?.map((block) => (
               <div className={styles.newcard__condition}>
-                <p>
-                  {block.title}
-
-                  {/* </p> */}
+                {/* <p> */}
+                {block.title}
+                <div>
                   {block.file ? (
                     <img
-                      // src={block.file}
                       src={`http://localhost:3003${block.file}`}
-                      className={styles.newcard__conditionImg}
-                      // alt="условие"
+                      className={
+                        block.style === "small"
+                          ? styles.newcard__conditionImg_small
+                          : block.style === "large"
+                          ? styles.newcard__conditionImg_large
+                          : styles.newcard__conditionImg
+                      }
+                      alt="условие"
                     />
                   ) : null}
-                </p>
+                </div>
+                {/* </p> */}
               </div>
             ))}
           </div>
@@ -116,7 +129,7 @@ function NewCard(props) {
                 <img src={IconStat} alt="statistics" />
                 <p>67%</p>
               </div>
-              <p>решили эту задачу</p>
+              {/* <p>решили эту задачу</p> */}
             </div>
           </div>
         </div>
@@ -141,6 +154,34 @@ function NewCard(props) {
           <button type="button" className={styles.newcard__btn}>
             теория
           </button>
+        </div>
+        <div
+          onClick={() => goToEditPage(task._id)}
+          className={styles.newcard__edit}
+        >
+          <img src={IconEdit} alt="edit" />
+        </div>
+        <div className={styles.newcard__img_wrapper}>
+          {task.skillInput === "easy" ? (
+            <IconCubeEasy fill={"#D5EFF3"} />
+          ) : (
+            // : task.skillInput === "hard"
+            // ? IconCubeHard
+            <IconCubeMiddle fill={"#6564DB"} />
+          )}
+
+          {/* <img
+            className={styles.newcard__skillImg}
+            src={
+              task.skillInput === "easy"
+                ? IconCubeEasy
+                : task.skillInput === "hard"
+                ? IconCubeHard
+                : IconCubeMiddle
+            }
+            // scr={MiddleCubeIcon}
+            alt="background_cube"
+          /> */}
         </div>
       </li>
       {isShowSolution && <BlockSolution task={task} />}

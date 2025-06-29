@@ -8,7 +8,7 @@ export const SELECTABLE_CLASSES = [
   "11 класс",
 ];
 
-export const SELECTABLE_DIFFICULTY = ["easy", "middle", "hard", "super-hard"];
+export const SELECTABLE_SKILL = ["easy", "middle", "hard", "super-hard"];
 
 export const SELECTABLE_SUBJECTS = ["алгерба", "геометрия"];
 

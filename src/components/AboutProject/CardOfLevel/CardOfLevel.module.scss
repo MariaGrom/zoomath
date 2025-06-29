@@ -1,18 +1,25 @@
 .sinopsis {
-    position: relative;
-    transform: translateY(100px);
-    transition: .6s;
-    display: inline-block;
-    margin: 0;
-    padding-top: 15px;
+  position: relative;
+  transform: translateY(100px);
+  transition: 0.6s;
+  display: inline-block;
+  margin: 0;
+  padding-top: 15px;
 }
 
 .img {
-    position: absolute;
-    bottom: 4px;
-    right: 4px;
+  position: absolute;
+  bottom: 4px;
+  right: 4px;
+  width: 45px;
+
+  svg {
+    path {
+      fill: red;
+    }
+  }
 }
 
 .accordion__level1:hover .sinopsis {
-    transform: translateY(0);
+  transform: translateY(0);
 }
