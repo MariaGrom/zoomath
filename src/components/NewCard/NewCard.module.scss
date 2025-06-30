@@ -12,6 +12,7 @@
   flex-direction: column;
   justify-content: space-between;
   box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.25);
+  min-height: 250px;
 
   p {
     // font-family: "Cormorant Infant", serif;
@@ -220,10 +221,16 @@
 
   &__img_wrapper {
     position: absolute;
-    right: 76px;
-    top: -43px;
+    right: 110px;
+    top: 25px;
     z-index: 1;
+  }
 
-    border: 1px solid green;
+  &__tag {
+    padding: 4px 8px;
+    background-color: $blueDisable;
+    width: fit-content;
+    border-radius: 20px;
+    height: 28px;
   }
 }

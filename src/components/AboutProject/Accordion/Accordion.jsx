@@ -1,7 +1,7 @@
 import styles from "./Accordion.module.scss";
 import IconCubeEasy from "../../../img/cube-easy";
 // import IconCubeMiddle from "../../../img/cube-middle.svg";
-import IconCubeHard from "../../../img/cube-hard.svg";
+// import IconCubeHard from "../../../img/cube-hard.svg";
 import CardOfLevel from "../CardOfLevel/CardOfLevel";
 
 function Accordion({ isShow }) {
@@ -35,7 +35,7 @@ function Accordion({ isShow }) {
               styleSinopsis={styles.sinopsis}
               title="hard"
               description="всплывающий текст при наведении"
-              icon={IconCubeHard}
+              // icon={IconCubeHard}
               alt="cubeHard"
             />
           </ul>
@@ -67,7 +67,7 @@ function Accordion({ isShow }) {
               styleSinopsis={styles.sinopsis}
               title="hard"
               description="всплывающий текст при наведении"
-              icon={IconCubeHard}
+              // icon={IconCubeHard}
               alt="cubeHard"
             />
           </ul>

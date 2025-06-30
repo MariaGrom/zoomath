@@ -7,7 +7,7 @@ import { BlockSolution } from "../BlockSolution/BlockSolution";
 import { useNavigate } from "react-router-dom";
 import IconCubeEasy from "../../img/cube-easy";
 import IconCubeMiddle from "../../img/cube-middle";
-import IconCubeHard from "../../img/cube-hard.svg";
+import IconCubeHard from "../../img/cube-hard";
 
 function NewCard(props) {
   const { task, isExampleCard } = props;
@@ -134,7 +134,7 @@ function NewCard(props) {
           </div>
         </div>
 
-        <div className={styles.newcard__btns}>
+        {/* <div className={styles.newcard__btns}>
           <button
             type="button"
             className={styles.newcard__btn}
@@ -154,7 +154,15 @@ function NewCard(props) {
           <button type="button" className={styles.newcard__btn}>
             теория
           </button>
+        </div> */}
+        <div style={{ display: "flex", flexDirection: "row" }}>
+          <div>Ответ:</div>
+          <input />
+          <button type="button" className={styles.newcard__btn}>
+            Отправить
+          </button>
         </div>
+        <div className={styles.newcard__tag}>{task.tagInput}</div>
         <div
           onClick={() => goToEditPage(task._id)}
           className={styles.newcard__edit}
@@ -163,10 +171,10 @@ function NewCard(props) {
         </div>
         <div className={styles.newcard__img_wrapper}>
           {task.skillInput === "easy" ? (
-            <IconCubeEasy fill={"#D5EFF3"} />
+            <IconCubeEasy fill={"#89D2DC"} />
+          ) : task.skillInput === "hard" ? (
+            <IconCubeHard fill={"#0A06C2"} />
           ) : (
-            // : task.skillInput === "hard"
-            // ? IconCubeHard
             <IconCubeMiddle fill={"#6564DB"} />
           )}
 

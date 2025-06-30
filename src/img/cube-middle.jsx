@@ -2,8 +2,8 @@ import React, { FC } from "react";
 
 const IconCubeMiddle = ({ fill }) => (
   <svg
-    width="311"
-    height="295"
+    width="200"
+    height="190"
     viewBox="0 0 311 295"
     fill="none"
     xmlns="http://www.w3.org/2000/svg"
