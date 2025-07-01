@@ -39,12 +39,9 @@ function CardAlgebra() {
       });
   }, []);
 
-  // console.log("tasks", tasks);
-
   const [filteredTasks, setFilteredTasks] = useState(tasks);
 
   function taskFilter(skill) {
-    console.log("click", tasks);
     if (skill === "all") {
       setFilteredTasks(tasks);
     } else {
@@ -125,36 +122,7 @@ function CardAlgebra() {
           )}
         </ul>
         <div className="Card-list">
-          {/* <p>
-          При \(a \ne 0\) получается два корня уравнения \(ax^2 + bx + c = 0\),
-  для нахождения которых используют формулу
-  $${x}_{1,2} = {-b \pm \sqrt{b^2-4ac} \over 2a}.$$
-          </p> */}
-          <div>
-            {/* <h1>Математические формулы с LaTeX</h1>
-            <p>
-              Инлайн формула:{" "}
-              <MathJaxRenderer formula="a^2 + b^2 = c^2" inline />
-              <MathJaxRenderer
-                formula={
-                  "=\\frac{15^{2}-48\\sqrt[3]{36}}{\\frac{-b\\pm \\sqrt{b^{2}-4ac}}{2a}}"
-                }
-              />
-            </p> */}
-            {/* <p>Блочная формула:</p>
-            <MathJaxRenderer formula="E = mc^2" />
-            <MathJaxRenderer formula={"=\frac{15}{24}"} /> */}
-
-            {/* <MathJaxRenderer formula={"\\text{Привет}\\ x=\\frac{15}{24}"} /> */}
-          </div>
-
-          {/* <ReactMarkdown
-            children={markdownText[0].solution}
-            // remarkPlugins={[remarkMath]}
-            // rehypePlugins={[rehypeKatex]}
-          /> */}
-
-          {tasks.map((task) => (
+          {filteredTasks.map((task) => (
             <NewCard key={task._id} task={task} />
           ))}
         </div>

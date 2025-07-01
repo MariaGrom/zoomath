@@ -155,8 +155,8 @@ function NewCard(props) {
             теория
           </button>
         </div> */}
-        <div style={{ display: "flex", flexDirection: "row" }}>
-          <div>Ответ:</div>
+        <div className={styles.newcard__flexbox_answer}>
+          <p>Ответ:</p>
           <input />
           <button type="button" className={styles.newcard__btn}>
             Отправить
