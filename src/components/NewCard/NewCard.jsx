@@ -67,7 +67,7 @@ function NewCard(props) {
     console.log("click");
     navigate(`/edit/${cardId}`, "_blank");
   };
-  console.log("task", task);
+  // console.log("task", task);
 
   return (
     <>
@@ -177,19 +177,6 @@ function NewCard(props) {
           ) : (
             <IconCubeMiddle fill={"#6564DB"} />
           )}
-
-          {/* <img
-            className={styles.newcard__skillImg}
-            src={
-              task.skillInput === "easy"
-                ? IconCubeEasy
-                : task.skillInput === "hard"
-                ? IconCubeHard
-                : IconCubeMiddle
-            }
-            // scr={MiddleCubeIcon}
-            alt="background_cube"
-          /> */}
         </div>
       </li>
       {isShowSolution && <BlockSolution task={task} />}
