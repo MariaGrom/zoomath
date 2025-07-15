@@ -36,7 +36,9 @@ export const SELECTABLE_TOPIC_GEOMA = [
 ];
 
 export const SELECTABLE_TOPIC_ALGEBRA = [
-  "дроби",
-  "квадратные уравнения",
-  "неравенства",
+  { value: "степени 7 класс", label: "степени 7 класс" },
+];
+
+export const SELECTABLE_TAGS_ALGEBRA = [
+  { value: "степени 7 класс (С7К)", label: "степени 7 класс (С7К" },
 ];

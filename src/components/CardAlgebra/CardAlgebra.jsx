@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import "./CardAlgebra.css";
+import styles from "./CardAlgebra.module.scss";
 import NewCard from "../NewCard/NewCard";
 import { GEOMETRY_TASKS } from "../../mock/geometry/geometry_tasks";
 import { ALGEBRA_TASKS } from "../../mock/algebra/algebra_tasks";
@@ -51,18 +51,18 @@ function CardAlgebra() {
   }
 
   return (
-    <div className="MainLayout">
-      <h3 className="Card-title">
+    <div className={styles.filter__mainLayout}>
+      <h3 className={styles.filter__title}>
         навигационная строка(если нужно) типа: Алгебра/база
         вопросов/9класс/задания по теме №1
       </h3>
-      <div className="Card-content">
-        <ul className="Card-selectorList">
+      <div className={styles.filter__content}>
+        <ul className={styles.filter__selectorList}>
           <li>
             <button
               id="all"
               type="button"
-              className="Card-skill"
+              className={styles.filter__skill}
               onClick={() => taskFilter("all")}
             >
               все
@@ -72,7 +72,7 @@ function CardAlgebra() {
             <button
               id="easy"
               type="button"
-              className="Card-skill"
+              className={styles.filter__skill}
               onClick={() => taskFilter("easy")}
             >
               легкий
@@ -82,7 +82,7 @@ function CardAlgebra() {
             <button
               id="middle"
               type="button"
-              className="Card-skill"
+              className={styles.filter__skill}
               onClick={() => taskFilter("middle")}
             >
               средний
@@ -92,7 +92,7 @@ function CardAlgebra() {
             <button
               id="hard"
               type="button"
-              className="Card-skill"
+              className={styles.filter__skill}
               onClick={() => taskFilter("hard")}
             >
               сложный
@@ -102,7 +102,7 @@ function CardAlgebra() {
             <button
               id="super-hard"
               type="button"
-              className="Card-skill"
+              className={styles.filter__skill}
               onClick={() => taskFilter("super-hard")}
             >
               олимпиадный
@@ -113,7 +113,7 @@ function CardAlgebra() {
             <li>
               <button
                 type="button"
-                className="Card-skill"
+                className={styles.filter__skill}
                 onClick={() => taskFilter("middle-log")}
               >
                 залоген
@@ -121,7 +121,7 @@ function CardAlgebra() {
             </li>
           )}
         </ul>
-        <div className="Card-list">
+        <div className={styles.filter__list}>
           {filteredTasks.map((task) => (
             <NewCard key={task._id} task={task} />
           ))}

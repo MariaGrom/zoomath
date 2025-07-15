@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import "./CreateCardPage.scss";
+import styles from "./CreateCardPage.module.scss";
 import { DropdownCustom } from "../../components/Dropdown/DropdownCustom";
 import { PrimaryButton } from "../../components/PrimaryButton/PrimaryButton";
 import { CreateBlock } from "../../components/CreateBlock/CreateBlock";
@@ -7,6 +7,8 @@ import {
   SELECTABLE_CLASSES,
   SELECTABLE_SUBJECTS,
   SELECTABLE_SKILL,
+  SELECTABLE_TOPIC_ALGEBRA,
+  SELECTABLE_TAGS_ALGEBRA,
   SELECTABLE_IMG_STYLE,
 } from "../../vendor/constants";
 import NewCard from "../../components/NewCard/NewCard";
@@ -18,6 +20,8 @@ export const CreateCardPage = (props) => {
 
   const [blocks, setBlocks] = useState([]);
   const [topicInput, setTopicInput] = useState("");
+  const [topicInputOption, setTopicInputOption] = useState("");
+
   const [tagInput, setTagInput] = useState("");
 
   const [subjectInput, setSubjectInput] = useState("");
@@ -134,39 +138,75 @@ export const CreateCardPage = (props) => {
     setSubjectInput(selected.value);
   };
 
+  const handleChangeTopic = (selected) => {
+    setTopicInputOption(selected);
+    setTopicInput(selected.value);
+  };
+
+  // Предпросмотр карточки
+  const tempNewCard = {
+    blocks: blocks,
+    classInput: classInput,
+    skillInput: skillInput,
+    subjectInput: subjectInput,
+    tagInput: [tagInput],
+    topicInput: topicInput,
+  };
+
+  console.log("tempNewCard", tempNewCard);
+
   return (
-    <div
-      style={{ display: "flex", flexDirection: "column", alignItems: "center" }}
-    >
+    <div className={styles.form}>
       Создай новую карточку задачи
-      <div>
-        <input
-          type="text"
-          placeholder="тема"
-          value={topicInput}
-          onChange={(e) => setTopicInput(e.target.value)}
-        />
-        <Select
-          value={subjectInputOption}
-          onChange={handleChangeSubject}
-          options={SELECTABLE_SUBJECTS}
-        />
-        <Select
-          value={skillInputOption}
-          onChange={handleChangeSkill}
-          options={SELECTABLE_SKILL}
-        />
-        <input
-          type="text"
-          placeholder="тег"
-          value={tagInput}
-          onChange={(e) => setTagInput(e.target.value)}
-        />
-        <Select
-          value={classInputOption}
-          onChange={handleChangeClass}
-          options={SELECTABLE_CLASSES}
-        />
+      <div className={styles.form__fields}>
+        <div className={styles.form__field}>
+          <label> Выберите предмет, по которому будет создана карточка</label>
+          <Select
+            value={subjectInputOption}
+            onChange={handleChangeSubject}
+            options={SELECTABLE_SUBJECTS}
+            placeholder="Выберите предмет"
+          />
+        </div>
+        <div className={styles.form__field}>
+          <label>Выберите класс</label>
+          <Select
+            value={classInputOption}
+            onChange={handleChangeClass}
+            options={SELECTABLE_CLASSES}
+            placeholder="Выберите класс"
+          />
+        </div>
+        <div className={styles.form__field}>
+          <label>Выберите тему, по которой будет создана карточка</label>
+          <Select
+            value={topicInputOption}
+            onChange={handleChangeTopic}
+            options={SELECTABLE_TOPIC_ALGEBRA}
+            placeholder="Выберите тему"
+          />
+        </div>
+        <div className={styles.form__field}>
+          <label>Укажите сложность задачи</label>
+          <Select
+            value={skillInputOption}
+            onChange={handleChangeSkill}
+            options={SELECTABLE_SKILL}
+            placeholder="Выберите сложность"
+          />
+        </div>
+        <div className={styles.form__field}>
+          <label>
+            Напишите тег, по которому будет выдаваться данная задача в
+            поисковике
+          </label>
+          <input
+            type="text"
+            placeholder="Напишите тег"
+            value={tagInput}
+            onChange={(e) => setTagInput(e.target.value)}
+          />
+        </div>
       </div>
       {/* Динамические блоки */}
       <div>
