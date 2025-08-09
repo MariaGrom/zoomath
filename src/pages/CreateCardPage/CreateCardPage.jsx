@@ -37,7 +37,7 @@ export const CreateCardPage = (props) => {
   // const API_URL = process.env.REACT_APP_SERVER_IP;
 
   // const [apiUrl, setApiUrl] = useState(""); // Сохраняем API URL
-  const apiUrl = "http://localhost:3003";
+  const apiUrl = "https://zoomath-api.onrender.com/";
 
   const handleAddBlockClick = () => {
     setBlocks([...blocks, { file: null, title: "" }]);

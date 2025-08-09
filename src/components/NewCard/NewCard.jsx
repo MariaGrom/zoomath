@@ -97,7 +97,7 @@ function NewCard(props) {
                 <div>
                   {block.file ? (
                     <img
-                      src={`http://localhost:3003${block.file}`}
+                      src={`https://zoomath-api.onrender.com${block.file}`}
                       className={
                         block.style === "small"
                           ? styles.newcard__conditionImg_small

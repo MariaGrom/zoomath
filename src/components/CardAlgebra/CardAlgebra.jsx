@@ -15,7 +15,7 @@ function CardAlgebra() {
 
   // пробный запрос данных с локального сервера через fetch
   useEffect(() => {
-    fetch("http://localhost:3003/algebra/base/card", {
+    fetch("https://zoomath-api.onrender.com/algebra/base/card", {
       headers: {
         "content-type": "application/json",
       },
